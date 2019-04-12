@@ -3,103 +3,103 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>NuKeeperWebsite/basics/</loc>
+    <loc>/NuKeeperWebsite/basics/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/commands/inspect/</loc>
+    <loc>/NuKeeperWebsite/commands/inspect/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/basics/installation/</loc>
+    <loc>/NuKeeperWebsite/basics/installation/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/commands/</loc>
+    <loc>/NuKeeperWebsite/commands/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/commands/update/</loc>
+    <loc>/NuKeeperWebsite/commands/update/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/platform/</loc>
+    <loc>/NuKeeperWebsite/platform/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/basics/output-and-logging/</loc>
+    <loc>/NuKeeperWebsite/basics/output-and-logging/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/commands/repository/</loc>
+    <loc>/NuKeeperWebsite/commands/repository/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/platform/bitbucket/</loc>
+    <loc>/NuKeeperWebsite/platform/bitbucket/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/</loc>
+    <loc>/NuKeeperWebsite/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/platform/azure-devops/</loc>
+    <loc>/NuKeeperWebsite/platform/azure-devops/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/categories/</loc>
+    <loc>/NuKeeperWebsite/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/basics/configuration/</loc>
+    <loc>/NuKeeperWebsite/basics/configuration/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/basics/custom-feeds/</loc>
+    <loc>/NuKeeperWebsite/basics/custom-feeds/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/platform/github/</loc>
+    <loc>/NuKeeperWebsite/platform/github/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/platform/gitlab/</loc>
+    <loc>/NuKeeperWebsite/platform/gitlab/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/commands/global/</loc>
+    <loc>/NuKeeperWebsite/commands/global/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/commands/organisation/</loc>
+    <loc>/NuKeeperWebsite/commands/organisation/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/tags/</loc>
+    <loc>/NuKeeperWebsite/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>NuKeeperWebsite/platform/vsts/</loc>
+    <loc>/NuKeeperWebsite/platform/vsts/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   

@@ -1,139 +1,139 @@
 [
 {
-	"uri": "NuKeeperWebsite/basics/",
+	"uri": "/NuKeeperWebsite/basics/",
 	"title": "Basics",
 	"tags": [],
 	"description": "",
 	"content": " NuKeeper Basics See how to install NuKeeper and how to configure it for your purposes.\n"
 },
 {
-	"uri": "NuKeeperWebsite/commands/inspect/",
+	"uri": "/NuKeeperWebsite/commands/inspect/",
 	"title": "Inspect",
 	"tags": [],
 	"description": "",
 	"content": "Use the inspect command to show updates that can be applied to a solution.\nInspect the current folder:\ncd C:\\code\\MyApp nukeeper inspect  This produces output e.g.\nFound 2 package updates Microsoft.Extensions.Configuration.Json to 2.1.0 from 2.0.2 in 1 place since 13 days ago. Swashbuckle.AspNetCore to 2.5.0 from 2.4.0 in 1 place since 6 days ago.  You can inspect a different folder:\nnukeeper inspect C:\\code\\MyApp  "
 },
 {
-	"uri": "NuKeeperWebsite/basics/installation/",
+	"uri": "/NuKeeperWebsite/basics/installation/",
 	"title": "Installation",
 	"tags": [],
 	"description": "",
 	"content": " You will first need .NET Core 2.1 or later installed.\nNuKeeper can be found on NuGet as a global tool. The source is on GitHub.\nInstall NuKeeper with:\ndotnet tool install nukeeper --global\nUpdate NuKeeper with:\ndotnet tool update nukeeper --global\nUsing NuKeeper Running nukeeper with no arguments shows the help.\nnukeeper --help  Help on a NuKeeper command\nnukeeper repo --help  Update command Custom NuGet feeds If you have a custom or private NuGet feed, it is recommended that you use a NuGet.config file in your repository. It will be used by NuKeeper, and by other tools. You can specify a list of NuGet sources on the command line. e.g.\nnukeeper update --source https://api.nuget.org/v3/index.json --source http://packages.mycompany.com/nugetfeed  If you override this, you can chose to include the global public api.nuget.org feed or not. You may not need to, if your internal feed proxies the nuget.org feed.\nThe order of precedence is: 1) sources on command line 2) NuGet.config file 3) Default public NuGet.org feed\nGlobal command    Github AzureDevOps BitBucket GitLab     ✔️ ❌ ❌ ❌    Use the global command to update a particular package across your entire github server.\nnukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3  Output and debug logging To make logging show more details.\nnukeeper inspect C:\\code\\MyApp --verbosity detailed  Send debug logs to a file instead of console.\nnukeeper inspect C:\\code\\MyApp --logfile somefile.log  To turn off logging entirely.\nnukeeper inspect C:\\code\\MyApp --logdestination off  Code metrics as the only output\nnukeeper inspect C:\\code\\MyApp --logdestination off --outputformat metrics  Report updates in Comma-separated value format, to file as output.\nnukeeper inspect nukeeper inspect C:\\code\\MyApp --outputformat csv --outputfile packages.csv  Run Nukeeper on a remote repository, and just generate project metrics, no Pull Requests.\nnukeeper repo https://github.com/myorg/myrepo mygithubtoken --maxpackageupdates 0 --logdestination off --outputformat metrics  Run NuKeeper on a remote repository without any logging or output at all, just Pull Requests generated\nnukeeper repo https://github.com/myorg/myrepo mygithubtoken --logdestination off --outputdestination off  For all possible options and modes, see Configuration\n"
 },
 {
-	"uri": "NuKeeperWebsite/commands/",
+	"uri": "/NuKeeperWebsite/commands/",
 	"title": "Commands",
 	"tags": [],
 	"description": "",
 	"content": " NuKeeper Commands NuKeeper commands.\n"
 },
 {
-	"uri": "NuKeeperWebsite/commands/update/",
+	"uri": "/NuKeeperWebsite/commands/update/",
 	"title": "Update",
 	"tags": [],
 	"description": "",
 	"content": " Use the update command to apply an update to code.\nApply a update chosen by NuKeeper to a solution:\ncd C:\\code\\MyApp nukeeper update  or\nnukeeper update C:\\code\\MyApp  Apply up to ten package updates in a run:\nnukeeper update C:\\code\\MyApp --maxpackageupdates 10  Apply an update to a particular package:\nnukeeper update C:\\code\\MyApp --include SomePackageThatIWant  Exclude updates to a particular package:\nnukeeper update C:\\code\\MyApp --exclude SomePackageThatIDoNotWant  Apply updates to all packages of the AWS SDK, a set of closely-related packages with names that all start with AWSSDK.:\nnukeeper update C:\\code\\MyApp --include ^AWSSDK. --maxpackageupdates 100  Include and exclude Include and exclude package names with --include and --exclude. e.g. --include nlog or --exclude aspnet\nExclude specifies that packages that match the pattern will not be applied. Include specifies that only packages that match the pattern can be applied.\nThe patterns are regular expressions. This is not a regular expression tutorial, but it is worth knowing a few common ways to use it:\n By default, it is substring match. e.g. --include NLog will include all package names that contain the text NLog. You can anchor the match with ^ at the start or $ at the end to ensure that the package name starts and/or ends with the specified text. Using both start and end anchors means that it must be an exact match for the whole package name. e.g. i=^NLog$ will include only the package NLog. You can use | as an \u0026ldquo;or\u0026rdquo; to match one of several things. However since on the command line the | has special meaning to pipe command output, you have to escape it.  On the command line on windows you escape the | as ^|. e.g. to exclude updates to framework packages: --exclude (Microsoft^|System^|AspNet). In the bash shell on linux, you instead escape by wrapping the whole argument in single quotes, e.g. --exclude '(Microsoft|System|AspNet)'.   Restricting updates Restrict by version change When I do not want major version changes, only minor or patch version changes.\nnukeeper update --change minor  e.g. An update from version 1.2.3 to version 1.5.0 will be selected even if version 2.0.0 is also available. Semantic versioning calls these three numbers major, minor and patch versions. If semantic versioning is being well-used, then breaking changes only appear in major versions.\nThe default value is major.\nRestrict by package age When I am cautious, only want updates that have been available for 3 weeks or more.\nnukeeper update --age 3w  You can specify minimum update age in weeks (w), days (d) or hours (h), e.g. --age 6w, or --age 12h. The default is 7 days. You can use zero (0) on it\u0026rsquo;s own.\nThis is a precaution against being on the \u0026ldquo;bleeding edge\u0026rdquo; by taking new packages immediately. Sometimes issues are discovered just after package release, and the package is removed or replaced by a x.0.1 fix release.\nWhen I am living on the edge, I will take updates as soon as they are available.\nnukeeper update --age 0  "
 },
 {
-	"uri": "NuKeeperWebsite/platform/",
+	"uri": "/NuKeeperWebsite/platform/",
 	"title": "Platform",
 	"tags": [],
 	"description": "",
 	"content": " NuKeeper Platform support These are al the supported platforms. Find instruction on how to use NuKeeper with your platform by selecting an item from the menu.\n"
 },
 {
-	"uri": "NuKeeperWebsite/basics/output-and-logging/",
+	"uri": "/NuKeeperWebsite/basics/output-and-logging/",
 	"title": "Output and Logging",
 	"tags": [],
 	"description": "",
 	"content": "Text produced by NuKeeper falls into two categories: logging and output. Both can be independently sent to console, or to file, or turned off. Both default to the console.\nOptions related to logging are verbosity, logdestination and logfile. Options related to output are outputformat, outputdestination, and outputfile\nIf the run of NuKeeper is intended to produce Pull Requests, then output and logging is less important. But if the run is intended to inspect local code or remote repositories, the output is the primary result of the run. Logging is important for debugging issues.\nLogging has verbosity so that it can produce more lines or fewer lines. Verbosity is one of Quiet, Minimal, Normal, Detailed.\nOutput has different formats, intended for different consumers, be it human or machine-readable.\n Text is the default format, and is intended to be human readable. None turns it off entirely. No output is produced. Csv produces a report in Comma-Separated Value format, with one line for each package update found. Metrics produces several code metrics, one per line, each with a \u0026ldquo;name: number\u0026rdquo; format. The libyears metric is included. libyears outputs only the libyears number.  We may add to the output formats over time based on what people need.\nFor both logging and output, both destination and file options can be specified on the command-line or in the settings file. The usual fallback applies - values taken are (in order) from command line, from settings file, from the default value.\nIn both cases, destination is an enumeration, one of Console, File or Off. Off makes a null object that does not record the data at all. File appends to the named file.\nIn both cases, if the destination is File and no file name is given, then a default file name is used, nukeeper.log for logging, and nukeeper.out for output. So if you specify --logdestination file on the command-line and nothing else log-related, logging will go to the file nukeeper.log.\nIn both cases, the default destination is Console, unless a file name is given on the command-line, in which case the default is File. So if you specify --outputfile somefile.out on the command-line and nothing else output-related, output will go to the file somefile.out.\n"
 },
 {
-	"uri": "NuKeeperWebsite/commands/repository/",
+	"uri": "/NuKeeperWebsite/commands/repository/",
 	"title": "Repository",
 	"tags": [],
 	"description": "",
 	"content": " Use the repository command to raise multiple pull requests against a GitHub repository. The repository does not need to be present on the file system beforehand. It will be fetched to a temporary folder.\nIf you run these command lines regularly, you can automatically get update pull requests like this one and always keep a project\u0026rsquo;s dependencies up to date.\nRaising a pull request is intended to hook into the automated tests and manual review process that you use. You can then choose to merge or reject the pull request based on the outcome.\nIn order to work with repositories, you will first need a personal access token.\nGithub\nnukeeper repo https://github.com/myorg/myrepo token  Azure DevOps\nnukeeper repo https://dev.azure.com/{org}/{project}/_git/{repo}/ token  The minimum scope of access associated for the token to make NuKeeper work is \u0026ldquo;Code (Read \u0026amp; write)\u0026ldquo;.\nWith Arguments I want one Pull Request that applies a top ten updates to my repository\nnukeeper repo url token --maxpackageupdates 10 --consolidate  I want one Pull Request that applies updates to all packages of the AWS SDK:\nnukeeper repo url token --maxpackageupdates 100 --include ^AWSSDK. --consolidate  PR from local repository This is only available for azure devops and vsts  //TODO\nHidden token The token is a secret; often you don\u0026rsquo;t want to put it on the command line, e.g. if this command line is in a script stored in a public repository. In that case, you can put it in the appropriate environment variable blow and NuKeeper will automatically read it from there. NuKeeper_github_token Nukeeper_azure_devops_token\nset NuKeeper_github_token=mygithubtoken  Custom GitHub API server If you have a a different GitHub server, e.g. one hosted inside your organisation, you need to find out where its API root URL is. You can specify it to Nukeeper with e.g. --api=https://github.mycompany.com/api/v3. The default is the public API at https://api.github.com\nThe host must contain the word github to be able to select the right platform.\nOptions for controlling pull requests NuKeeper often operates in a target-rich environment, where you don\u0026rsquo;t want to raise all the potential pull requests at once.\nNuKeeper sorts the pull requests, using heuristics so that more impactful updates are at the top, but you also can control how many pull requests are raised, when and what levels of change.\nExamples --maxpackageupdates 2 Limit to two pull requests generated by a run. The default value is 3.\n--change minor Do not allow major version changes.\n--age 10d Do not apply any version change until it has been available for 10 days. The default is 7 days. You can also specify this value in weeks with e.g. age=6w or hours with e.g. age=12h.\n"
 },
 {
-	"uri": "NuKeeperWebsite/platform/bitbucket/",
+	"uri": "/NuKeeperWebsite/platform/bitbucket/",
 	"title": "Bitbucket",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "NuKeeperWebsite/",
+	"uri": "/NuKeeperWebsite/",
 	"title": "NuKeeper",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "NuKeeperWebsite/platform/azure-devops/",
+	"uri": "/NuKeeperWebsite/platform/azure-devops/",
 	"title": "Azure Devops",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "NuKeeperWebsite/categories/",
+	"uri": "/NuKeeperWebsite/categories/",
 	"title": "Categories",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "NuKeeperWebsite/basics/configuration/",
+	"uri": "/NuKeeperWebsite/basics/configuration/",
 	"title": "Configuration",
 	"tags": [],
 	"description": "",
 	"content": "   Long name Short name Commands where it applies Default value     help h all    age a all 7d   change c all Major   useprerelease  all FromPrerelease   exclude e all null   include i all null   source s all NuGet.org public api url         verbosity v all Normal   logdestination  all Console   logfile  all \u0026lsquo;nukeeper.log\u0026rsquo;   ouputformat  all Text   ouputdestination  all Console   ouputfile  all \u0026lsquo;nukeeper.out\u0026rsquo;         api g org, global GitHub.com public API Uri   api g repo Depends on repository Uri   fork f repo, org, global PreferFork (Github)  SingleRepository (AzureDevOps)   fork f repo, org, global PreferFork   label l repo, org, global \u0026lsquo;nukeeper\u0026rsquo;   maxpackageupdates m repo, org, global, update 3, or when the command is update, 1   consolidate n repo, org, global false   platform  repo, org, global null         maxrepo  org, global 10   includerepos  org, global null   excluderepos  org, global null     age The minimum package age. In order to not consume packages immediately after they are released, exclude updates that do not meet a minimum age. The default is 7 days. This age is the duration between the published date of the selected package update and now. A value can be expressed in command options as an integer and a unit suffix, where the unit is one of h for hour, d for days, w for weeks. A zero with no unit is also allowed. Examples: 0 = zero, 12h = 12 hours, 3d = 3 days, 2w = two weeks.\n change The greatest level of update that is allowed to packages, based on the version number difference. Values are: Major, Minor, Patch. See Semver for what these mean. The default value Major will allow updates to the overall latest version even if it means accepting a new major version.\n UsePrerelease Should NuKeeper suggest updates to a pre-release (beta) package version. Values are Always, Never, FromPrerelease. The default is FromPrerelease, meaning that only a package that is currently used at a pre-release version will be updated to a later pre-release version.\n  For example, if you are currently using package Foo at version 1.2.3 and these new versions are available: 1.2.4 - a patch version change, 1.3.0 - a minor version change and 2.0.0 - a new major version. * If the allowed version change is Major (the default) you will get an update to the overall latest version, i.e. 2.0.0. * If you set the allowed version change to Minor, you will get an update to 1.3.0 as now changes to the major version number are not allowed. Version 1.2.4 is also allowed, but the largest allowed update is applied. * If the allowed version change is Patch you will only get an update to version 1.2.4.\n exclude Do not consider packages matching this regex pattern. include Only consider packages matching this regex pattern. source Specifies a NuGet package source to use during the operation. This setting overrides all of the sources specified in the NuGet.config files. Multiple sources can be provided by specifying this option multiple times.\n verbosity. Controls how much log data is produced. Values are, from least output to most output: Quiet, Minimal, Normal, Detailed. Quiet should produce no output unless there is an error, and Detailed is suitable for debugging issues. You can also use short names for these log levels: Q, M, N, D.\n logdestination: Where log data is sent: One of: Console, File, Off. Default is Console.\n logfile when set, log data will be appended to the named file instead of going to console.\n outputformat. Format for output. One of: None, Text, Csv, Metrics,Libyears. Default is Text.\n outputdestination: Where output is sent: One of: Console, File, Off. Default is Console.\n outputfile : Name of file to send output to. Used when output destination is File. default is nukeeper.out.\n api This is the api endpoint for the instance you\u0026rsquo;re targeting. If you are using an internal server and not a public one, you must set it to the api url for your server. The value will be e.g. https://github.mycompany.com/api/v3.\n fork Values are PreferFork, PreferSingleRepository and SingleRepositoryOnly. Prefer to make branches on a fork of the target repository, or on that repository itself. See the section \u0026ldquo;Branches, forks and pull requests\u0026rdquo; below.\n label Label to apply to GitHub pull requests. Can be specified multiple times.\n maxpackageupdates The maximum number of package updates to apply. In repo,org and global commands, this limits the number of updates per repository. If the --consolidate flag is used, these wll be consolidated into one Pull Request. If not, then there will be one Pull Request per update applied. In the update command, The default value is 1. When changed, multiple updates can be applied in a single update run, up to this number.\n maxrepo The maximum number of repositories to change. Used in Organisation and Global mode.\n consolidate Consolidate updates into a single pull request, instead of the default of 1 pull request per package update applied.\n platform One of GitHub, AzureDevOps, Bitbucket, BitbucketLocal. Determines which kind of source control api will be used. This is typicaly infered from the api url structure, but since this does not always work, it can be specified here if neccessary.\n includerepos A regex to filter repositories by name. Only consider repositories where the name matches this regex pattern. Used in Organisation and Global mode.\n excluderepos A regex to filter repositories by name. Do not consider repositories where the name matches this regex pattern. Used in Organisation and Global mode.\n  "
 },
 {
-	"uri": "NuKeeperWebsite/basics/custom-feeds/",
+	"uri": "/NuKeeperWebsite/basics/custom-feeds/",
 	"title": "Custom Feeds",
 	"tags": [],
 	"description": "",
 	"content": "If you have a custom or private NuGet feed, it is recommended that you use a NuGet.config file in your repository. It will be used by NuKeeper, and by other tools. You can specify a list of NuGet sources on the command line. e.g.\nnukeeper update --source https://api.nuget.org/v3/index.json --source http://packages.mycompany.com/nugetfeed  If you override this, you can chose to include the global public api.nuget.org feed or not. You may not need to, if your internal feed proxies the nuget.org feed.\nThe order of precedence is: 1) sources on command line 2) NuGet.config file 3) Default public NuGet.org feed\n"
 },
 {
-	"uri": "NuKeeperWebsite/platform/github/",
+	"uri": "/NuKeeperWebsite/platform/github/",
 	"title": "Github",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "NuKeeperWebsite/platform/gitlab/",
+	"uri": "/NuKeeperWebsite/platform/gitlab/",
 	"title": "Gitlab",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "NuKeeperWebsite/commands/global/",
+	"uri": "/NuKeeperWebsite/commands/global/",
 	"title": "Global",
 	"tags": [],
 	"description": "",
 	"content": "This command is only available for github  Use the global command to update a particular package across your entire github server.\nnukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3  "
 },
 {
-	"uri": "NuKeeperWebsite/commands/organisation/",
+	"uri": "/NuKeeperWebsite/commands/organisation/",
 	"title": "Organisation",
 	"tags": [],
 	"description": "",
 	"content": "This command is only available for github  Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same GitHub Organisation.\nnukeeper org myteam mygithubtoken  "
 },
 {
-	"uri": "NuKeeperWebsite/tags/",
+	"uri": "/NuKeeperWebsite/tags/",
 	"title": "Tags",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "NuKeeperWebsite/platform/vsts/",
+	"uri": "/NuKeeperWebsite/platform/vsts/",
 	"title": "Vsts",
 	"tags": [],
 	"description": "",

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Commands on NuKeeper</title>
-    <link>NuKeeperWebsite/commands/</link>
+    <link>/NuKeeperWebsite/commands/</link>
     <description>Recent content in Commands on NuKeeper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="NuKeeperWebsite/commands/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/NuKeeperWebsite/commands/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Inspect</title>
-      <link>NuKeeperWebsite/commands/inspect/</link>
+      <link>/NuKeeperWebsite/commands/inspect/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>NuKeeperWebsite/commands/inspect/</guid>
+      <guid>/NuKeeperWebsite/commands/inspect/</guid>
       <description>Use the inspect command to show updates that can be applied to a solution.
 Inspect the current folder:
 cd C:\code\MyApp nukeeper inspect  This produces output e.g.
@@ -25,10 +25,10 @@ nukeeper inspect C:\code\MyApp  </description>
     
     <item>
       <title>Update</title>
-      <link>NuKeeperWebsite/commands/update/</link>
+      <link>/NuKeeperWebsite/commands/update/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>NuKeeperWebsite/commands/update/</guid>
+      <guid>/NuKeeperWebsite/commands/update/</guid>
       <description>Use the update command to apply an update to code.
 Apply a update chosen by NuKeeper to a solution:
 cd C:\code\MyApp nukeeper update  or
@@ -40,10 +40,10 @@ nukeeper update C:\code\MyApp --exclude SomePackageThatIDoNotWant  Apply updates
     
     <item>
       <title>Repository</title>
-      <link>NuKeeperWebsite/commands/repository/</link>
+      <link>/NuKeeperWebsite/commands/repository/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>NuKeeperWebsite/commands/repository/</guid>
+      <guid>/NuKeeperWebsite/commands/repository/</guid>
       <description>Use the repository command to raise multiple pull requests against a GitHub repository. The repository does not need to be present on the file system beforehand. It will be fetched to a temporary folder.
 If you run these command lines regularly, you can automatically get update pull requests like this one and always keep a project&amp;rsquo;s dependencies up to date.
 Raising a pull request is intended to hook into the automated tests and manual review process that you use.</description>
@@ -51,20 +51,20 @@ Raising a pull request is intended to hook into the automated tests and manual r
     
     <item>
       <title>Global</title>
-      <link>NuKeeperWebsite/commands/global/</link>
+      <link>/NuKeeperWebsite/commands/global/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>NuKeeperWebsite/commands/global/</guid>
+      <guid>/NuKeeperWebsite/commands/global/</guid>
       <description>This command is only available for github  Use the global command to update a particular package across your entire github server.
 nukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3  </description>
     </item>
     
     <item>
       <title>Organisation</title>
-      <link>NuKeeperWebsite/commands/organisation/</link>
+      <link>/NuKeeperWebsite/commands/organisation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>NuKeeperWebsite/commands/organisation/</guid>
+      <guid>/NuKeeperWebsite/commands/organisation/</guid>
       <description>This command is only available for github  Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same GitHub Organisation.
 nukeeper org myteam mygithubtoken  </description>
     </item>

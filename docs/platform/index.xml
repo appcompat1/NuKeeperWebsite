@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Platform on NuKeeper</title>
-    <link>NuKeeperWebsite/platform/</link>
+    <link>/NuKeeperWebsite/platform/</link>
     <description>Recent content in Platform on NuKeeper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 12 Apr 2019 14:22:34 +0200</lastBuildDate>
     
-	<atom:link href="NuKeeperWebsite/platform/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/NuKeeperWebsite/platform/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bitbucket</title>
-      <link>NuKeeperWebsite/platform/bitbucket/</link>
+      <link>/NuKeeperWebsite/platform/bitbucket/</link>
       <pubDate>Fri, 12 Apr 2019 14:22:34 +0200</pubDate>
       
-      <guid>NuKeeperWebsite/platform/bitbucket/</guid>
+      <guid>/NuKeeperWebsite/platform/bitbucket/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Azure Devops</title>
-      <link>NuKeeperWebsite/platform/azure-devops/</link>
+      <link>/NuKeeperWebsite/platform/azure-devops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>NuKeeperWebsite/platform/azure-devops/</guid>
+      <guid>/NuKeeperWebsite/platform/azure-devops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Github</title>
-      <link>NuKeeperWebsite/platform/github/</link>
+      <link>/NuKeeperWebsite/platform/github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>NuKeeperWebsite/platform/github/</guid>
+      <guid>/NuKeeperWebsite/platform/github/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Gitlab</title>
-      <link>NuKeeperWebsite/platform/gitlab/</link>
+      <link>/NuKeeperWebsite/platform/gitlab/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>NuKeeperWebsite/platform/gitlab/</guid>
+      <guid>/NuKeeperWebsite/platform/gitlab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vsts</title>
-      <link>NuKeeperWebsite/platform/vsts/</link>
+      <link>/NuKeeperWebsite/platform/vsts/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>NuKeeperWebsite/platform/vsts/</guid>
+      <guid>/NuKeeperWebsite/platform/vsts/</guid>
       <description></description>
     </item>
     
