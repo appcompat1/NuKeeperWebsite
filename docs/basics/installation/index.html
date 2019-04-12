@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.55.1" />
+    <meta name="description" content="Documentation for NuKeeper">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Installation :: NuKeeper</title>
+
+    
+    <link href="/css/nucleus.css?1555087055" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1555087055" rel="stylesheet">
+    <link href="/css/hybrid.css?1555087055" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1555087055" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1555087055" rel="stylesheet">
+    <link href="/css/auto-complete.css?1555087055" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1555087055" rel="stylesheet">
+    <link href="/css/theme.css?1555087055" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1555087055" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1555087055"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/basics/installation/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="/">
+    <img src="/img/NuKeeper.svg" style="max-width:70%;">
+</a>
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1555087055"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1555087055"></script>
+<script type="text/javascript">
+    
+        var baseurl = "";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1555087055"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/basics/" title="Basics" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/basics/">
+          <b>1. </b>Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/basics/installation/" title="Installation" class="dd-item active">
+        <a href="/basics/installation/">
+        Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/basics/output-and-logging/" title="Output and Logging" class="dd-item ">
+        <a href="/basics/output-and-logging/">
+        Output and Logging
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/basics/configuration/" title="Configuration" class="dd-item ">
+        <a href="/basics/configuration/">
+        Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/basics/custom-feeds/" title="Custom Feeds" class="dd-item ">
+        <a href="/basics/custom-feeds/">
+        Custom Feeds
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/commands/" title="Commands" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/commands/">
+          <b>2. </b>Commands
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/inspect/" title="Inspect" class="dd-item ">
+        <a href="/commands/inspect/">
+        Inspect
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/update/" title="Update" class="dd-item ">
+        <a href="/commands/update/">
+        Update
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/repository/" title="Repository" class="dd-item ">
+        <a href="/commands/repository/">
+        Repository
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/global/" title="Global" class="dd-item ">
+        <a href="/commands/global/">
+        Global
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/organisation/" title="Organisation" class="dd-item ">
+        <a href="/commands/organisation/">
+        Organisation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/platform/" title="Platform" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/platform/">
+          <b>3. </b>Platform
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/platform/bitbucket/" title="Bitbucket" class="dd-item ">
+        <a href="/platform/bitbucket/">
+        Bitbucket
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/platform/azure-devops/" title="Azure Devops" class="dd-item ">
+        <a href="/platform/azure-devops/">
+        Azure Devops
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/platform/github/" title="Github" class="dd-item ">
+        <a href="/platform/github/">
+        Github
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/platform/gitlab/" title="Gitlab" class="dd-item ">
+        <a href="/platform/gitlab/">
+        Gitlab
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/platform/vsts/" title="Vsts" class="dd-item ">
+        <a href="/platform/vsts/">
+        Vsts
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="http://getgrav.org">Grav</a> and <a href="http://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/NuKeeperDotnet/NuKeeper/edit/master/site/content/basics/installation.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>NuKeeper</a> > <a href='/basics/'>Basics</a> > Installation
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#using-nukeeper">Using NuKeeper</a>
+<ul>
+<li><a href="#update-command">Update command</a>
+<ul>
+<li><a href="#custom-nuget-feeds">Custom NuGet feeds</a></li>
+</ul></li>
+<li><a href="#global-command">Global command</a></li>
+<li><a href="#output-and-debug-logging">Output and debug logging</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Installation
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>You will first need <a href="https://www.microsoft.com/net">.NET Core 2.1 or later installed</a>.</p>
+
+<p>NuKeeper <a href="https://www.nuget.org/packages/NuKeeper/">can be found on NuGet as a global tool</a>. The <a href="https://github.com/NuKeeperDotNet/NuKeeper">source is on GitHub</a>.</p>
+
+<p>Install NuKeeper with:</p>
+
+<p><code>dotnet tool install nukeeper --global</code></p>
+
+<p>Update NuKeeper with:</p>
+
+<p><code>dotnet tool update nukeeper --global</code></p>
+
+<h1 id="using-nukeeper">Using NuKeeper</h1>
+
+<p>Running <code>nukeeper</code> with no arguments shows the help.</p>
+
+<pre><code class="language-bat">nukeeper --help
+</code></pre>
+
+<p>Help on a NuKeeper command</p>
+
+<pre><code class="language-bat">nukeeper repo --help
+</code></pre>
+
+<h2 id="update-command">Update command</h2>
+
+<h3 id="custom-nuget-feeds">Custom NuGet feeds</h3>
+
+<p>If you have a custom or private NuGet feed, it is recommended that you use <a href="https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesources">a <code>NuGet.config</code> file</a> in your repository. It will be used by NuKeeper, and by other tools. You can specify a list of NuGet sources on the command line. e.g.</p>
+
+<pre><code class="language-bat">nukeeper update --source https://api.nuget.org/v3/index.json --source http://packages.mycompany.com/nugetfeed
+</code></pre>
+
+<p>If you override this, you can chose to include the global public <code>api.nuget.org</code> feed or not. You may not need to, if your internal feed proxies the nuget.org feed.</p>
+
+<p>The order of precedence is:
+ 1) sources on command line
+ 2) <code>NuGet.config</code> file
+ 3) Default public NuGet.org feed</p>
+
+<h2 id="global-command">Global command</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">Github</th>
+<th align="center">AzureDevOps</th>
+<th align="center">BitBucket</th>
+<th align="center">GitLab</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">✔️</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+<td align="center">❌</td>
+</tr>
+</tbody>
+</table>
+
+<p>Use the global command to update a particular package across your entire github server.</p>
+
+<pre><code class="language-bat">nukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3
+</code></pre>
+
+<h2 id="output-and-debug-logging">Output and debug logging</h2>
+
+<p>To make logging show more details.</p>
+
+<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --verbosity detailed
+</code></pre>
+
+<p>Send debug logs to a file instead of console.</p>
+
+<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --logfile somefile.log
+</code></pre>
+
+<p>To turn off logging entirely.</p>
+
+<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --logdestination off
+</code></pre>
+
+<p>Code metrics as the only output</p>
+
+<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --logdestination off --outputformat metrics
+</code></pre>
+
+<p>Report updates in Comma-separated value format, to file as output.</p>
+
+<pre><code class="language-bat">nukeeper inspect nukeeper inspect C:\code\MyApp --outputformat csv --outputfile packages.csv
+</code></pre>
+
+<p>Run Nukeeper on a remote repository, and just generate project metrics, no Pull Requests.</p>
+
+<pre><code class="language-bat">nukeeper repo https://github.com/myorg/myrepo mygithubtoken --maxpackageupdates 0 --logdestination off --outputformat metrics
+</code></pre>
+
+<p>Run NuKeeper on a remote repository without any logging or output at all, just Pull Requests generated</p>
+
+<pre><code class="language-bat"> nukeeper repo https://github.com/myorg/myrepo mygithubtoken --logdestination off --outputdestination off
+</code></pre>
+
+<hr />
+
+<p>For all possible options and modes, see <a href="Configuration">Configuration</a></p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1555087055"></script>
+    <script src="/js/perfect-scrollbar.min.js?1555087055"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1555087055"></script>
+    <script src="/js/jquery.sticky.js?1555087055"></script>
+    <script src="/js/featherlight.min.js?1555087055"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1555087055"></script>
+    <script src="/js/highlight.pack.js?1555087055"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1555087055"></script>
+    <script src="/js/learn.js?1555087055"></script>
+    <script src="/js/hugo-learn.js?1555087055"></script>
+
+    <link href="/mermaid/mermaid.css?1555087055" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1555087055"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

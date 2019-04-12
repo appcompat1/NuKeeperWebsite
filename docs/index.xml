@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NuKeeper</title>
+    <link>/</link>
+    <description>Recent content on NuKeeper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 12 Apr 2019 14:22:34 +0200</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Inspect</title>
+      <link>/commands/inspect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/inspect/</guid>
+      <description>Use the inspect command to show updates that can be applied to a solution.
+Inspect the current folder:
+cd C:\code\MyApp nukeeper inspect  This produces output e.g.
+Found 2 package updates Microsoft.Extensions.Configuration.Json to 2.1.0 from 2.0.2 in 1 place since 13 days ago. Swashbuckle.AspNetCore to 2.5.0 from 2.4.0 in 1 place since 6 days ago.  You can inspect a different folder:
+nukeeper inspect C:\code\MyApp  </description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>/basics/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/installation/</guid>
+      <description>You will first need .NET Core 2.1 or later installed.
+NuKeeper can be found on NuGet as a global tool. The source is on GitHub.
+Install NuKeeper with:
+dotnet tool install nukeeper --global
+Update NuKeeper with:
+dotnet tool update nukeeper --global
+Using NuKeeper Running nukeeper with no arguments shows the help.
+nukeeper --help  Help on a NuKeeper command
+nukeeper repo --help  Update command Custom NuGet feeds If you have a custom or private NuGet feed, it is recommended that you use a NuGet.</description>
+    </item>
+    
+    <item>
+      <title>Update</title>
+      <link>/commands/update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/update/</guid>
+      <description>Use the update command to apply an update to code.
+Apply a update chosen by NuKeeper to a solution:
+cd C:\code\MyApp nukeeper update  or
+nukeeper update C:\code\MyApp  Apply up to ten package updates in a run:
+nukeeper update C:\code\MyApp --maxpackageupdates 10  Apply an update to a particular package:
+nukeeper update C:\code\MyApp --include SomePackageThatIWant  Exclude updates to a particular package:
+nukeeper update C:\code\MyApp --exclude SomePackageThatIDoNotWant  Apply updates to all packages of the AWS SDK, a set of closely-related packages with names that all start with AWSSDK.</description>
+    </item>
+    
+    <item>
+      <title>Output and Logging</title>
+      <link>/basics/output-and-logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/output-and-logging/</guid>
+      <description>Text produced by NuKeeper falls into two categories: logging and output. Both can be independently sent to console, or to file, or turned off. Both default to the console.
+Options related to logging are verbosity, logdestination and logfile. Options related to output are outputformat, outputdestination, and outputfile
+If the run of NuKeeper is intended to produce Pull Requests, then output and logging is less important. But if the run is intended to inspect local code or remote repositories, the output is the primary result of the run.</description>
+    </item>
+    
+    <item>
+      <title>Repository</title>
+      <link>/commands/repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/repository/</guid>
+      <description>Use the repository command to raise multiple pull requests against a GitHub repository. The repository does not need to be present on the file system beforehand. It will be fetched to a temporary folder.
+If you run these command lines regularly, you can automatically get update pull requests like this one and always keep a project&amp;rsquo;s dependencies up to date.
+Raising a pull request is intended to hook into the automated tests and manual review process that you use.</description>
+    </item>
+    
+    <item>
+      <title>Bitbucket</title>
+      <link>/platform/bitbucket/</link>
+      <pubDate>Fri, 12 Apr 2019 14:22:34 +0200</pubDate>
+      
+      <guid>/platform/bitbucket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Azure Devops</title>
+      <link>/platform/azure-devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/azure-devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>/basics/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/configuration/</guid>
+      <description>Long name Short name Commands where it applies Default value     help h all    age a all 7d   change c all Major   useprerelease  all FromPrerelease   exclude e all null   include i all null   source s all NuGet.org public api url         verbosity v all Normal   logdestination  all Console   logfile  all &amp;lsquo;nukeeper.</description>
+    </item>
+    
+    <item>
+      <title>Custom Feeds</title>
+      <link>/basics/custom-feeds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/custom-feeds/</guid>
+      <description>If you have a custom or private NuGet feed, it is recommended that you use a NuGet.config file in your repository. It will be used by NuKeeper, and by other tools. You can specify a list of NuGet sources on the command line. e.g.
+nukeeper update --source https://api.nuget.org/v3/index.json --source http://packages.mycompany.com/nugetfeed  If you override this, you can chose to include the global public api.nuget.org feed or not. You may not need to, if your internal feed proxies the nuget.</description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>/platform/github/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>/platform/gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Global</title>
+      <link>/commands/global/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/global/</guid>
+      <description>This command is only available for github  Use the global command to update a particular package across your entire github server.
+nukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3  </description>
+    </item>
+    
+    <item>
+      <title>Organisation</title>
+      <link>/commands/organisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/organisation/</guid>
+      <description>This command is only available for github  Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same GitHub Organisation.
+nukeeper org myteam mygithubtoken  </description>
+    </item>
+    
+    <item>
+      <title>Vsts</title>
+      <link>/platform/vsts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/vsts/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
