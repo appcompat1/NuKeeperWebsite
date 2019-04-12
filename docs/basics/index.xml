@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Basics on NuKeeper</title>
-    <link>/NuKeeperWebsite/basics/</link>
+    <link>/basics/</link>
     <description>Recent content in Basics on NuKeeper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/NuKeeperWebsite/basics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/basics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Installation</title>
-      <link>/NuKeeperWebsite/basics/installation/</link>
+      <link>/basics/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/NuKeeperWebsite/basics/installation/</guid>
+      <guid>/basics/installation/</guid>
       <description>You will first need .NET Core 2.1 or later installed.
 NuKeeper can be found on NuGet as a global tool. The source is on GitHub.
 Install NuKeeper with:
@@ -29,10 +29,10 @@ nukeeper repo --help  Update command Custom NuGet feeds If you have a custom or 
     
     <item>
       <title>Output and Logging</title>
-      <link>/NuKeeperWebsite/basics/output-and-logging/</link>
+      <link>/basics/output-and-logging/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/NuKeeperWebsite/basics/output-and-logging/</guid>
+      <guid>/basics/output-and-logging/</guid>
       <description>Text produced by NuKeeper falls into two categories: logging and output. Both can be independently sent to console, or to file, or turned off. Both default to the console.
 Options related to logging are verbosity, logdestination and logfile. Options related to output are outputformat, outputdestination, and outputfile
 If the run of NuKeeper is intended to produce Pull Requests, then output and logging is less important. But if the run is intended to inspect local code or remote repositories, the output is the primary result of the run.</description>
@@ -40,19 +40,19 @@ If the run of NuKeeper is intended to produce Pull Requests, then output and log
     
     <item>
       <title>Configuration</title>
-      <link>/NuKeeperWebsite/basics/configuration/</link>
+      <link>/basics/configuration/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/NuKeeperWebsite/basics/configuration/</guid>
+      <guid>/basics/configuration/</guid>
       <description>Long name Short name Commands where it applies Default value     help h all    age a all 7d   change c all Major   useprerelease  all FromPrerelease   exclude e all null   include i all null   source s all NuGet.org public api url         verbosity v all Normal   logdestination  all Console   logfile  all &amp;lsquo;nukeeper.</description>
     </item>
     
     <item>
       <title>Custom Feeds</title>
-      <link>/NuKeeperWebsite/basics/custom-feeds/</link>
+      <link>/basics/custom-feeds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/NuKeeperWebsite/basics/custom-feeds/</guid>
+      <guid>/basics/custom-feeds/</guid>
       <description>If you have a custom or private NuGet feed, it is recommended that you use a NuGet.config file in your repository. It will be used by NuKeeper, and by other tools. You can specify a list of NuGet sources on the command line. e.g.
 nukeeper update --source https://api.nuget.org/v3/index.json --source http://packages.mycompany.com/nugetfeed  If you override this, you can chose to include the global public api.nuget.org feed or not. You may not need to, if your internal feed proxies the nuget.</description>
     </item>
