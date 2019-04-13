@@ -28,12 +28,12 @@
   </url>
   
   <url>
-    <loc>/platform/</loc>
+    <loc>/basics/output-and-logging/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/basics/output-and-logging/</loc>
+    <loc>/platform/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
   
@@ -45,12 +45,6 @@
   <url>
     <loc>/platform/bitbucket/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-04-12T18:32:39+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -86,6 +80,12 @@
   <url>
     <loc>/commands/global/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-04-12T18:32:39+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
