@@ -12,20 +12,20 @@
     <title>Azure Devops :: NuKeeper</title>
 
     
-    <link href="/css/nucleus.css?1555160307" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1555160307" rel="stylesheet">
-    <link href="/css/hybrid.css?1555160307" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1555160307" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1555160307" rel="stylesheet">
-    <link href="/css/auto-complete.css?1555160307" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1555160307" rel="stylesheet">
-    <link href="/css/theme.css?1555160307" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1555160307" rel="stylesheet">
+    <link href="/css/nucleus.css?1555161107" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1555161107" rel="stylesheet">
+    <link href="/css/hybrid.css?1555161107" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1555161107" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1555161107" rel="stylesheet">
+    <link href="/css/auto-complete.css?1555161107" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1555161107" rel="stylesheet">
+    <link href="/css/theme.css?1555161107" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1555161107" rel="stylesheet">
     
-      <link href="/css/theme-nukeeper.css?1555160307" rel="stylesheet">
+      <link href="/css/theme-nukeeper.css?1555161107" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1555160307"></script>
+    <script src="/js/jquery-3.3.1.min.js?1555161107"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1555160307"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1555160307"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1555161107"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1555161107"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1555160307"></script>
+<script type="text/javascript" src="/js/search.js?1555161107"></script>
 
     
   </div>
@@ -425,25 +425,6 @@
 
             
           
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/platform/vsts/" title="Vsts" class="dd-item ">
-        <a href="/platform/vsts/">
-        Vsts
-        
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
         
         </ul>
               
@@ -525,7 +506,26 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#extension">Extension</a>
+<ul>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#yaml">Yaml</a></li>
+<li><a href="#editor-mode">Editor mode</a></li>
+<li><a href="#permissions">Permissions</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#repo-command">Repo command</a>
+<ul>
+<li><a href="#additional-arguments">Additional arguments</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -549,6 +549,104 @@
 
 
 
+
+
+<div class="notices tip" ><p>NuKeeper supports Azure Devops, VSTS and TFS on premise. The same instruction apply for all these platforms!</p>
+</div>
+
+
+<p>NuKeeper supports intergration with Azure Devops in two ways. One of them is to use the <code>repo</code> command and the other one is through the <code>extension</code>. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</p>
+
+<h2 id="extension">Extension</h2>
+
+<p>The NuKeeper extension is available in the <a href="https://marketplace.visualstudio.com/items?itemName=nukeeper.nukeeper#overview">marketplace</a>. In order to install it you need to add it to your organisation click the <code>Get it free</code> button and follow the installation. Once that is done you can create a new pipeline and use the extension.</p>
+
+<h3 id="installation">Installation</h3>
+
+<p>Azure Devops gives us the option to do it either in editor mode, or in yaml.</p>
+
+<h4 id="yaml">Yaml</h4>
+
+<ol>
+<li>Add a new build pipeline and select yaml.</li>
+
+<li><p>Add the following <code>yml</code> file and adjust where necessary:</p>
+
+<pre>
+    <code class="language-yml">resources:
+       - repo: self #point to its own repo, change it if you don't want that
+    pool:
+        name: Hosted VS2017 # can be anything you want
+    steps:
+      - task: nukeeper.nukeeper.nukeeper.NuKeeper@0
+        displayName: NuKeeper</code><span class="copy-to-clipboard" title="Copy to clipboard"></span>
+</pre>
+    </li>
+
+<li><p>Optionally add extra arguments, The extension just call the <code>repo</code> command, so any arguments extra for your repo command can be added here.
+<pre>
+<code class="language-yml">resources:
+    steps:
+    - task: nukeeper.nukeeper.nukeeper.NuKeeper@0
+    displayName: NuKeeper
+    inputs:
+        arguments: &lsquo;-m 3 -v d&rsquo;</code><span class="copy-to-clipboard" title="Copy to clipboard"></span>
+</pre></p></li>
+
+<li><p>Go to triggers and click the <i class="fas fa-plus"></i> Add button to add your schedule. <a href="https://github.com/Microsoft/azure-pipelines-yaml/issues/39">This cannot be done in yml yet.</a></p></li>
+
+<li><p>Finally give the <code>build service user</code> the required <em><a href="#permissions">Permissions</a></em> and take it for a spin by qeueing a new build!</p></li>
+</ol>
+
+<h4 id="editor-mode">Editor mode</h4>
+
+<ol>
+<li>Create a new build pipeline for editor mode.</li>
+<li>Select your repository and select the master branch.</li>
+<li>Add a new task to your pipeline and select NuKeeper.</li>
+<li>Optionally, click on the task and add additional arguments to the <code>Arguments</code> field. For help on the arguments checkout the <a href="/basics/configuration.md">Configuration</a> page. The extension just call the <code>repo</code> command, so any arguments extra for your repo command can be added here.</li>
+<li>Go to triggers and click the <i class="fas fa-plus"></i> Add button to add your schedule.</li>
+
+<li><p>Enable your agent to access the oauth token:
+<img src="/img/oauth_checkmark.png" alt="Oauth checkmark" /></p></li>
+
+<li><p>Finally give the <code>build service user</code> the required <em><a href="#permissions">Permissions</a></em> and take it for a spin by qeueing a new build!</p></li>
+</ol>
+
+<h4 id="permissions">Permissions</h4>
+
+<p>The extensions uses the <code>build service user</code> to make a PR. By default this user is not allowed to do that. We have to give it the permissions to do so:</p>
+
+<ol>
+<li>Go to &ldquo;Project settings&rdquo; in your AzureDevops home screen.</li>
+<li>Click repositories</li>
+<li>Click Git repositories</li>
+<li>Click the build service User(the bottom one, something like: Project collection build service)</li>
+</ol>
+
+<p>Give it the following rights:</p>
+
+<ul>
+<li>Contribute <code>Allow</code></li>
+<li>Contribute to pull requests <code>Allow</code></li>
+<li>Create branch <code>Allow</code></li>
+</ul>
+
+<h2 id="repo-command">Repo command</h2>
+
+<p>The repo command works for azure-devops &amp; vsts they same as for the other platforms. You will need a <a href="https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops">personal access token</a> to use the repo command.</p>
+
+<pre><code class="language-batch">nukeeper repo &quot;https://dev.azure.com/{org}/{project}/_git/{repo}/&quot; &lt;PAT&gt;
+</code></pre>
+
+<h3 id="additional-arguments">Additional arguments</h3>
+
+<p>Add any additional arguments that are available for the repo command</p>
+
+<pre><code class="language-batch">nukeeper repo &quot;https://dev.azure.com/{org}/{project}/_git/{repo}/&quot; &lt;PAT&gt; -m 10
+</code></pre>
+
+<p>The <code>-m 10</code> tells NuKeeper that it may update 10 packages. For more parameters checkout the <a href="/basics/configuration.md">Configuration</a> page.</p>
 
 
 <footer class=" footline" >
@@ -862,22 +960,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -896,20 +978,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1555160307"></script>
-    <script src="/js/perfect-scrollbar.min.js?1555160307"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1555160307"></script>
-    <script src="/js/jquery.sticky.js?1555160307"></script>
-    <script src="/js/featherlight.min.js?1555160307"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1555160307"></script>
-    <script src="/js/highlight.pack.js?1555160307"></script>
+    <script src="/js/clipboard.min.js?1555161107"></script>
+    <script src="/js/perfect-scrollbar.min.js?1555161107"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1555161107"></script>
+    <script src="/js/jquery.sticky.js?1555161107"></script>
+    <script src="/js/featherlight.min.js?1555161107"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1555161107"></script>
+    <script src="/js/highlight.pack.js?1555161107"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1555160307"></script>
-    <script src="/js/learn.js?1555160307"></script>
-    <script src="/js/hugo-learn.js?1555160307"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1555161107"></script>
+    <script src="/js/learn.js?1555161107"></script>
+    <script src="/js/hugo-learn.js?1555161107"></script>
 
-    <link href="/mermaid/mermaid.css?1555160307" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1555160307"></script>
+    <link href="/mermaid/mermaid.css?1555161107" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1555161107"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

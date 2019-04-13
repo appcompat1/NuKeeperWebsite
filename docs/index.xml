@@ -93,7 +93,8 @@ Raising a pull request is intended to hook into the automated tests and manual r
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/platform/azure-devops/</guid>
-      <description></description>
+      <description>NuKeeper supports Azure Devops, VSTS and TFS on premise. The same instruction apply for all these platforms!
+NuKeeper supports intergration with Azure Devops in two ways. One of them is to use the repo command and the other one is through the extension. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</description>
     </item>
     
     <item>
@@ -162,15 +163,6 @@ nukeeper global mygithubtoken --include PackageToUpdate --api https://github.myc
       <description>This command is only available for github
 Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same GitHub Organisation.
 nukeeper org myteam mygithubtoken  </description>
-    </item>
-    
-    <item>
-      <title>Vsts</title>
-      <link>/platform/vsts/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/platform/vsts/</guid>
-      <description></description>
     </item>
     
   </channel>
