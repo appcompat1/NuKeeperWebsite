@@ -107,6 +107,16 @@ Raising a pull request is intended to hook into the automated tests and manual r
     </item>
     
     <item>
+      <title>Contributors</title>
+      <link>/contributors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/</guid>
+      <description>Thank you so much for making this happen!  
+.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@AnthonySteele522 commits@skolima72 commits@cohen99071 commits@NuKeeperBot39 commits@MarcBruins31 commits@shep198722 commits@slang2513 commits@zubivan4 commits@Jens-H-Eriksen3 commits@ChrisAnn2 commits@cswendrowski2 commits@acraven1 commits@ankeshdave1 commits@OneCyrus1 commits@flcdrg1 commits@josesimoes1 commits@markkemper11 commits@martincostello1 commits@MaxMommersteeg1 commits@LordMike1 commits@phatcher1 commits@sanderaernouts1 commits@area55git1 commits@jmiddour1 commits Tooling thanks to  Logos by area55 CommandLine utils by NateMcMaster Git automation by LibGit2Sharp Github client by Octokit licensed under MIT</description>
+    </item>
+    
+    <item>
       <title>Custom Feeds</title>
       <link>/basics/custom-feeds/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
