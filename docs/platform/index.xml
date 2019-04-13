@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Gitea</title>
+      <link>/platform/gitea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/gitea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Github</title>
       <link>/platform/github/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

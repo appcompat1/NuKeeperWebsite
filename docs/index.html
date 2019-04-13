@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>NuKeeper :: NuKeeper</title>
+    <title> :: NuKeeper</title>
 
     
-    <link href="/css/nucleus.css?1555145586" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1555145586" rel="stylesheet">
-    <link href="/css/hybrid.css?1555145586" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1555145586" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1555145586" rel="stylesheet">
-    <link href="/css/auto-complete.css?1555145586" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1555145586" rel="stylesheet">
-    <link href="/css/theme.css?1555145586" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1555145586" rel="stylesheet">
+    <link href="/css/nucleus.css?1555160307" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1555160307" rel="stylesheet">
+    <link href="/css/hybrid.css?1555160307" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1555160307" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1555160307" rel="stylesheet">
+    <link href="/css/auto-complete.css?1555160307" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1555160307" rel="stylesheet">
+    <link href="/css/theme.css?1555160307" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1555160307" rel="stylesheet">
     
-      <link href="/css/theme-nukeeper.css?1555145586" rel="stylesheet">
+      <link href="/css/theme-nukeeper.css?1555160307" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1555145586"></script>
+    <script src="/js/jquery-3.3.1.min.js?1555160307"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1555145586"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1555145586"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1555160307"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1555160307"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1555145586"></script>
+<script type="text/javascript" src="/js/search.js?1555160307"></script>
 
     
   </div>
@@ -375,6 +375,25 @@
  
   
     
+      <li data-nav-id="/platform/gitea/" title="Gitea" class="dd-item ">
+        <a href="/platform/gitea/">
+        Gitea
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
       <li data-nav-id="/platform/github/" title="Github" class="dd-item ">
         <a href="/platform/github/">
         Github
@@ -469,17 +488,98 @@
 <a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
 </span>
 
-           
-	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
+ 
+
+
+<h1 id="nukeeper">NuKeeper</h1>
+
+<p>Nukeeper is a tool to Automagically update NuGet packages in all .NET projects. It has command for local usage and for making PR&rsquo;s to a repostiory on all kinds of git hosting platforms. It supports .NET framework and .NET Core.</p>
+
+<h3 id="quick-install">Quick install</h3>
+
+<p>Installation is very easy. Just run this command and the tool will be installed.</p>
+
+<p>Install: <code>dotnet tool install nukeeper --global</code></p>
+
+<h3 id="platform-support">Platform support</h3>
+
+<p>NuKeeper works for .NET Framework and for .NET Core projects. It also has the ability to target private NuGet feeds.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">.NET Framework</th>
+<th align="center">.NET Core</th>
+<th align="center">Private Nuget Feed</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">✔️</td>
+<td align="center">✔️</td>
+<td align="center">✔️</td>
+</tr>
+</tbody>
+</table>
+
+<p>Integration with the following platforms is supported.</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Github</th>
+<th align="center">AzureDevOps</th>
+<th align="center">BitBucket</th>
+<th align="center">GitLab</th>
+<th align="center">Gitea</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">✔️</td>
+<td align="center">✔️</td>
+<td align="center">✔️</td>
+<td align="center">✔️</td>
+<td align="center">❌</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="commands">Commands</h3>
+
+<p>NuKeeper has different commands and options which can be utilized. Below you&rsquo;ll find a summary of all the commands and what they do.</p>
+
+<pre><code>Options:
+  --version     Show version information
+  -?|-h|--help  Show help information
+
+Commands:
+  global        Performs version checks and generates pull requests for all repositories the provided token can access.
+  inspect       Checks projects existing locally for possible updates.
+  org           Performs version checks and generates pull requests for all repositories in a github organisation.
+  repo          Performs version checks and generates pull requests for a single repository.
+  update        Applies relevant updates to a local project.
+</code></pre>
+
+<p><a href="https://github.com/NuKeeperDotNet/NuKeeper/wiki">For detailed information about the commands, please check out the wiki</a></p>
+
+<h3 id="licensing">Licensing</h3>
+
+<p>NuKeeper is licensed under the <a href="http://opensource.org/licenses/apache.html">Apache License</a></p>
+
+<ul>
+<li>Git automation by <a href="https://github.com/libgit2/libgit2sharp/">LibGit2Sharp</a> licensed under MIT<br /></li>
+<li>Github client by <a href="https://github.com/octokit/octokit.net">Octokit</a> licensed under MIT<br /></li>
+<li>NuGet protocol <a href="https://github.com/NuGet/NuGet.Client">NuGet.Protocol</a> licensed under Apache License Version 2.0</li>
+<li>NuGet CommandLine <a href="https://github.com/NuGet/NuGet.Client">NuGet commandLine</a> licensed under Apache License Version 2.0</li>
+<li>Command line parsing by <a href="https://github.com/natemcmaster/CommandLineUtils">McMaster.Extensions.CommandLineUtils</a> licensed under Apache License Version 2.0</li>
+</ul>
+
+<h3 id="acknowledgements">Acknowledgements</h3>
+
+<p>Logos by <a href="https://github.com/area55git">area55</a>, licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
 	
   
         
@@ -780,6 +880,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -798,20 +914,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1555145586"></script>
-    <script src="/js/perfect-scrollbar.min.js?1555145586"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1555145586"></script>
-    <script src="/js/jquery.sticky.js?1555145586"></script>
-    <script src="/js/featherlight.min.js?1555145586"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1555145586"></script>
-    <script src="/js/highlight.pack.js?1555145586"></script>
+    <script src="/js/clipboard.min.js?1555160307"></script>
+    <script src="/js/perfect-scrollbar.min.js?1555160307"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1555160307"></script>
+    <script src="/js/jquery.sticky.js?1555160307"></script>
+    <script src="/js/featherlight.min.js?1555160307"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1555160307"></script>
+    <script src="/js/highlight.pack.js?1555160307"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1555145586"></script>
-    <script src="/js/learn.js?1555145586"></script>
-    <script src="/js/hugo-learn.js?1555145586"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1555160307"></script>
+    <script src="/js/learn.js?1555160307"></script>
+    <script src="/js/hugo-learn.js?1555160307"></script>
 
-    <link href="/mermaid/mermaid.css?1555145586" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1555145586"></script>
+    <link href="/mermaid/mermaid.css?1555160307" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1555160307"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

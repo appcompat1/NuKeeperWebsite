@@ -48,6 +48,11 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2019-04-12T18:32:39+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/platform/azure-devops/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
@@ -68,6 +73,11 @@
   </url>
   
   <url>
+    <loc>/platform/gitea/</loc>
+    <lastmod>2019-04-13T14:57:41+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/platform/github/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
   </url>
@@ -80,12 +90,6 @@
   <url>
     <loc>/commands/global/</loc>
     <lastmod>2019-04-12T18:32:39+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2019-04-12T18:32:39+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
