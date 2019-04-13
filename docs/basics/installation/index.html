@@ -12,20 +12,20 @@
     <title>Installation :: NuKeeper</title>
 
     
-    <link href="/css/nucleus.css?1555164913" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1555164913" rel="stylesheet">
-    <link href="/css/hybrid.css?1555164913" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1555164913" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1555164913" rel="stylesheet">
-    <link href="/css/auto-complete.css?1555164913" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1555164913" rel="stylesheet">
-    <link href="/css/theme.css?1555164913" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1555164913" rel="stylesheet">
+    <link href="/css/nucleus.css?1555167780" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1555167780" rel="stylesheet">
+    <link href="/css/hybrid.css?1555167780" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1555167780" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1555167780" rel="stylesheet">
+    <link href="/css/auto-complete.css?1555167780" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1555167780" rel="stylesheet">
+    <link href="/css/theme.css?1555167780" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1555167780" rel="stylesheet">
     
-      <link href="/css/theme-nukeeper.css?1555164913" rel="stylesheet">
+      <link href="/css/theme-nukeeper.css?1555167780" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1555164913"></script>
+    <script src="/js/jquery-3.3.1.min.js?1555167780"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1555164913"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1555164913"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1555167780"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1555167780"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1555164913"></script>
+<script type="text/javascript" src="/js/search.js?1555167780"></script>
 
     
   </div>
@@ -536,15 +536,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
-<li><a href="#using-nukeeper">Using NuKeeper</a>
-<ul>
-<li><a href="#update-command">Update command</a>
-<ul>
-<li><a href="#custom-nuget-feeds">Custom NuGet feeds</a></li>
-</ul></li>
-<li><a href="#global-command">Global command</a></li>
-<li><a href="#output-and-debug-logging">Output and debug logging</a></li>
-</ul></li>
+<li><a href="#using-nukeeper">Using NuKeeper</a></li>
 </ul>
 </nav>
     </div>
@@ -578,107 +570,25 @@
 
 <p>Install NuKeeper with:</p>
 
-<p><code>dotnet tool install nukeeper --global</code></p>
+<pre><code class="language-sh">dotnet tool install nukeeper --global
+</code></pre>
 
 <p>Update NuKeeper with:</p>
 
-<p><code>dotnet tool update nukeeper --global</code></p>
+<pre><code class="language-sh">dotnet tool update nukeeper --global
+</code></pre>
 
 <h1 id="using-nukeeper">Using NuKeeper</h1>
 
 <p>Running <code>nukeeper</code> with no arguments shows the help.</p>
 
-<pre><code class="language-bat">nukeeper --help
+<pre><code class="language-sh">nukeeper --help
 </code></pre>
 
 <p>Help on a NuKeeper command</p>
 
-<pre><code class="language-bat">nukeeper repo --help
+<pre><code class="language-sh">nukeeper repo --help
 </code></pre>
-
-<h2 id="update-command">Update command</h2>
-
-<h3 id="custom-nuget-feeds">Custom NuGet feeds</h3>
-
-<p>If you have a custom or private NuGet feed, it is recommended that you use <a href="https://docs.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesources">a <code>NuGet.config</code> file</a> in your repository. It will be used by NuKeeper, and by other tools. You can specify a list of NuGet sources on the command line. e.g.</p>
-
-<pre><code class="language-bat">nukeeper update --source https://api.nuget.org/v3/index.json --source http://packages.mycompany.com/nugetfeed
-</code></pre>
-
-<p>If you override this, you can chose to include the global public <code>api.nuget.org</code> feed or not. You may not need to, if your internal feed proxies the nuget.org feed.</p>
-
-<p>The order of precedence is:
- 1) sources on command line
- 2) <code>NuGet.config</code> file
- 3) Default public NuGet.org feed</p>
-
-<h2 id="global-command">Global command</h2>
-
-<table>
-<thead>
-<tr>
-<th align="center">Github</th>
-<th align="center">AzureDevOps</th>
-<th align="center">BitBucket</th>
-<th align="center">GitLab</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td align="center">✔️</td>
-<td align="center">❌</td>
-<td align="center">❌</td>
-<td align="center">❌</td>
-</tr>
-</tbody>
-</table>
-
-<p>Use the global command to update a particular package across your entire github server.</p>
-
-<pre><code class="language-bat">nukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3
-</code></pre>
-
-<h2 id="output-and-debug-logging">Output and debug logging</h2>
-
-<p>To make logging show more details.</p>
-
-<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --verbosity detailed
-</code></pre>
-
-<p>Send debug logs to a file instead of console.</p>
-
-<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --logfile somefile.log
-</code></pre>
-
-<p>To turn off logging entirely.</p>
-
-<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --logdestination off
-</code></pre>
-
-<p>Code metrics as the only output</p>
-
-<pre><code class="language-bat">nukeeper inspect C:\code\MyApp --logdestination off --outputformat metrics
-</code></pre>
-
-<p>Report updates in Comma-separated value format, to file as output.</p>
-
-<pre><code class="language-bat">nukeeper inspect nukeeper inspect C:\code\MyApp --outputformat csv --outputfile packages.csv
-</code></pre>
-
-<p>Run Nukeeper on a remote repository, and just generate project metrics, no Pull Requests.</p>
-
-<pre><code class="language-bat">nukeeper repo https://github.com/myorg/myrepo mygithubtoken --maxpackageupdates 0 --logdestination off --outputformat metrics
-</code></pre>
-
-<p>Run NuKeeper on a remote repository without any logging or output at all, just Pull Requests generated</p>
-
-<pre><code class="language-bat"> nukeeper repo https://github.com/myorg/myrepo mygithubtoken --logdestination off --outputdestination off
-</code></pre>
-
-<hr />
-
-<p>For all possible options and modes, see <a href="Configuration">Configuration</a></p>
 
 
 <footer class=" footline" >
@@ -1004,25 +914,31 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1555164913"></script>
-    <script src="/js/perfect-scrollbar.min.js?1555164913"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1555164913"></script>
-    <script src="/js/jquery.sticky.js?1555164913"></script>
-    <script src="/js/featherlight.min.js?1555164913"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1555164913"></script>
-    <script src="/js/highlight.pack.js?1555164913"></script>
+    <script src="/js/clipboard.min.js?1555167780"></script>
+    <script src="/js/perfect-scrollbar.min.js?1555167780"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1555167780"></script>
+    <script src="/js/jquery.sticky.js?1555167780"></script>
+    <script src="/js/featherlight.min.js?1555167780"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1555167780"></script>
+    <script src="/js/highlight.pack.js?1555167780"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1555164913"></script>
-    <script src="/js/learn.js?1555164913"></script>
-    <script src="/js/hugo-learn.js?1555164913"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1555167780"></script>
+    <script src="/js/learn.js?1555167780"></script>
+    <script src="/js/hugo-learn.js?1555167780"></script>
 
-    <link href="/mermaid/mermaid.css?1555164913" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1555164913"></script>
+    <link href="/mermaid/mermaid.css?1555167780" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1555167780"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
-    
-
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-138277587-1', 'auto');
+    ga('send', 'pageview');
+  </script>
   </body>
 </html>
 
