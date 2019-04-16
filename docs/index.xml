@@ -6,7 +6,6 @@
     <description>Recent content on NuKeeper</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Apr 2019 14:22:34 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -77,15 +76,6 @@ Raising a pull request is intended to hook into the automated tests and manual r
     </item>
     
     <item>
-      <title>Bitbucket</title>
-      <link>/platform/bitbucket/</link>
-      <pubDate>Fri, 12 Apr 2019 14:22:34 +0200</pubDate>
-      
-      <guid>/platform/bitbucket/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Azure Devops</title>
       <link>/platform/azure-devops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -93,6 +83,18 @@ Raising a pull request is intended to hook into the automated tests and manual r
       <guid>/platform/azure-devops/</guid>
       <description>NuKeeper supports Azure Devops, VSTS and TFS on premise. The same instruction apply for all these platforms!
 NuKeeper supports intergration with Azure Devops in two ways. One of them is to use the repo command and the other one is through the extension. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</description>
+    </item>
+    
+    <item>
+      <title>Bitbucket</title>
+      <link>/platform/bitbucket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/bitbucket/</guid>
+      <description>NuKeeper has BitBucket support. This means NuKeeper can create PR&amp;rsquo;s to a single bitbucket repository using the repository command and a app password.
+Getting a app password To get a app password for your account go to bitbucket settings and click App password.
+NuKeeper needs an App password to create a PR on your repository.
+ Go to bitbucket settings Select App password Click the Create app password button Give it the following access rights:  Pull request: write(that should also select the other applicable access rights)  Store the token and use that for a NuKeeper repo command  Repo command The repo command has two required arguments.</description>
     </item>
     
     <item>
@@ -111,7 +113,7 @@ Raising a pull request is intended to hook into the automated tests and manual r
       
       <guid>/contributors/</guid>
       <description>Thank you so much for making this happen!  
-.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@AnthonySteele522 commits@skolima72 commits@cohen99071 commits@NuKeeperBot39 commits@MarcBruins33 commits@shep198722 commits@slang2514 commits@zubivan4 commits@Jens-H-Eriksen3 commits@ChrisAnn2 commits@cswendrowski2 commits@acraven1 commits@ankeshdave1 commits@OneCyrus1 commits@flcdrg1 commits@josesimoes1 commits@markkemper11 commits@martincostello1 commits@MaxMommersteeg1 commits@LordMike1 commits@phatcher1 commits@sanderaernouts1 commits@area55git1 commits@jmiddour1 commits Tooling thanks to  Logos by area55 CommandLine utils by NateMcMaster Git automation by LibGit2Sharp Github client by Octokit licensed under MIT</description>
+.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@AnthonySteele522 commits@skolima72 commits@cohen99071 commits@NuKeeperBot39 commits@MarcBruins34 commits@shep198722 commits@slang2514 commits@zubivan4 commits@Jens-H-Eriksen3 commits@ChrisAnn2 commits@cswendrowski2 commits@acraven1 commits@ankeshdave1 commits@OneCyrus1 commits@flcdrg1 commits@josesimoes1 commits@markkemper11 commits@martincostello1 commits@MaxMommersteeg1 commits@LordMike1 commits@phatcher1 commits@sanderaernouts1 commits@area55git1 commits@jmiddour1 commits Tooling thanks to  Logos by area55 CommandLine utils by NateMcMaster Git automation by LibGit2Sharp Github client by Octokit licensed under MIT</description>
     </item>
     
     <item>

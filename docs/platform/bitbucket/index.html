@@ -12,20 +12,20 @@
     <title>Bitbucket :: NuKeeper</title>
 
     
-    <link href="/css/nucleus.css?1555231393" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1555231393" rel="stylesheet">
-    <link href="/css/hybrid.css?1555231393" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1555231393" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1555231393" rel="stylesheet">
-    <link href="/css/auto-complete.css?1555231393" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1555231393" rel="stylesheet">
-    <link href="/css/theme.css?1555231393" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1555231393" rel="stylesheet">
+    <link href="/css/nucleus.css?1555403352" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1555403352" rel="stylesheet">
+    <link href="/css/hybrid.css?1555403352" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1555403352" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1555403352" rel="stylesheet">
+    <link href="/css/auto-complete.css?1555403352" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1555403352" rel="stylesheet">
+    <link href="/css/theme.css?1555403352" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1555403352" rel="stylesheet">
     
-      <link href="/css/theme-nukeeper.css?1555231393" rel="stylesheet">
+      <link href="/css/theme-nukeeper.css?1555403352" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1555231393"></script>
+    <script src="/js/jquery-3.3.1.min.js?1555403352"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1555231393"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1555231393"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1555403352"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1555403352"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1555231393"></script>
+<script type="text/javascript" src="/js/search.js?1555403352"></script>
 
     
   </div>
@@ -337,9 +337,9 @@
  
   
     
-      <li data-nav-id="/platform/bitbucket/" title="Bitbucket" class="dd-item active">
-        <a href="/platform/bitbucket/">
-        Bitbucket
+      <li data-nav-id="/platform/azure-devops/" title="Azure Devops" class="dd-item ">
+        <a href="/platform/azure-devops/">
+        Azure Devops
         
         </a>
     </li>
@@ -356,9 +356,9 @@
  
   
     
-      <li data-nav-id="/platform/azure-devops/" title="Azure Devops" class="dd-item ">
-        <a href="/platform/azure-devops/">
-        Azure Devops
+      <li data-nav-id="/platform/bitbucket/" title="Bitbucket" class="dd-item active">
+        <a href="/platform/bitbucket/">
+        Bitbucket
         
         </a>
     </li>
@@ -534,7 +534,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#getting-a-app-password">Getting a app password</a></li>
+<li><a href="#repo-command">Repo command</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -558,6 +566,41 @@
 
 
 
+
+
+<p>NuKeeper has BitBucket support. This means NuKeeper can create PR&rsquo;s to a <em>single</em> bitbucket repository using the repository command and a app password.</p>
+
+<h2 id="getting-a-app-password">Getting a app password</h2>
+
+<p>To get a app password for your <em>account</em> go to <code>bitbucket settings</code> and click <em>App password</em>.</p>
+
+<p>NuKeeper needs an <em>App password</em> to create a PR on your repository.</p>
+
+<ol>
+<li>Go to <code>bitbucket settings</code></li>
+<li>Select <code>App password</code></li>
+<li>Click the <code>Create app password</code> button</li>
+<li>Give it the following access rights:
+
+<ul>
+<li>Pull request: write(that should also select the other applicable access rights)</li>
+</ul></li>
+<li>Store the token and use that for a NuKeeper repo command</li>
+</ol>
+
+<h2 id="repo-command">Repo command</h2>
+
+<p>The repo command has two required arguments. The first one is the repository that you want to target. For BitBucket <strong>you can use the same url that you use for cloning</strong>. So something like:</p>
+
+<pre><code class="language-sh">https://{username}@bitbucket.org/{username}/{repositoryname}.git
+</code></pre>
+
+<p>Now to run the command use</p>
+
+<pre><code class="language-sh">nukeeper repo https://{username}@bitbucket.org/{username}/{repositoryname}.git {AppPassword}
+</code></pre>
+
+<p>Any additional arguments can be added after the app password, for more information checkout the <a href="/basics/configuration.md">Configuration</a> page.</p>
 
 
 <footer class=" footline" >
@@ -789,6 +832,25 @@
             
                 
                     
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                     
                 
                 
@@ -808,22 +870,6 @@
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -886,20 +932,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1555231393"></script>
-    <script src="/js/perfect-scrollbar.min.js?1555231393"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1555231393"></script>
-    <script src="/js/jquery.sticky.js?1555231393"></script>
-    <script src="/js/featherlight.min.js?1555231393"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1555231393"></script>
-    <script src="/js/highlight.pack.js?1555231393"></script>
+    <script src="/js/clipboard.min.js?1555403352"></script>
+    <script src="/js/perfect-scrollbar.min.js?1555403352"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1555403352"></script>
+    <script src="/js/jquery.sticky.js?1555403352"></script>
+    <script src="/js/featherlight.min.js?1555403352"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1555403352"></script>
+    <script src="/js/highlight.pack.js?1555403352"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1555231393"></script>
-    <script src="/js/learn.js?1555231393"></script>
-    <script src="/js/hugo-learn.js?1555231393"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1555403352"></script>
+    <script src="/js/learn.js?1555403352"></script>
+    <script src="/js/hugo-learn.js?1555403352"></script>
 
-    <link href="/mermaid/mermaid.css?1555231393" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1555231393"></script>
+    <link href="/mermaid/mermaid.css?1555403352" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1555403352"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
