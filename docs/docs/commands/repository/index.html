@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="description" content="Documentation for NuKeeper">
+
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Repository :: NuKeeper</title>
+
+    
+    <link href="/css/nucleus.css?1555581507" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1555581507" rel="stylesheet">
+    <link href="/css/hybrid.css?1555581507" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1555581507" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1555581507" rel="stylesheet">
+    <link href="/css/auto-complete.css?1555581507" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1555581507" rel="stylesheet">
+    <link href="/css/theme.css?1555581507" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1555581507" rel="stylesheet">
+    
+      <link href="/css/theme-nukeeper.css?1555581507" rel="stylesheet">
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1555581507"></script>
+
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/commands/repository/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="/">
+    <img src="/img/NuKeeper.svg" style="max-width:70%;">
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1555581507"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1555581507"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1555581507"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/basics/" title="Basics" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/basics/">
+          <b>1. </b>Basics
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/basics/installation/" title="Installation" class="dd-item ">
+        <a href="/basics/installation/">
+        Installation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/basics/output-and-logging/" title="Output and Logging" class="dd-item ">
+        <a href="/basics/output-and-logging/">
+        Output and Logging
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/basics/configuration/" title="Configuration" class="dd-item ">
+        <a href="/basics/configuration/">
+        Configuration
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/basics/custom-feeds/" title="Custom Feeds" class="dd-item ">
+        <a href="/basics/custom-feeds/">
+        Custom Feeds
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/commands/" title="Commands" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/commands/">
+          <b>2. </b>Commands
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/inspect/" title="Inspect" class="dd-item ">
+        <a href="/commands/inspect/">
+        Inspect
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/update/" title="Update" class="dd-item ">
+        <a href="/commands/update/">
+        Update
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/repository/" title="Repository" class="dd-item active">
+        <a href="/commands/repository/">
+        Repository
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/global/" title="Global" class="dd-item ">
+        <a href="/commands/global/">
+        Global
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/commands/organisation/" title="Organisation" class="dd-item ">
+        <a href="/commands/organisation/">
+        Organisation
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/platform/" title="Platform" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/platform/">
+          <b>3. </b>Platform
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/platform/azure-devops/" title="Azure Devops" class="dd-item ">
+        <a href="/platform/azure-devops/">
+        Azure Devops
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/platform/bitbucket/" title="Bitbucket" class="dd-item ">
+        <a href="/platform/bitbucket/">
+        Bitbucket
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/platform/gitea/" title="Gitea" class="dd-item ">
+        <a href="/platform/gitea/">
+        Gitea
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/platform/github/" title="Github" class="dd-item ">
+        <a href="/platform/github/">
+        Github
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/platform/gitlab/" title="Gitlab" class="dd-item ">
+        <a href="/platform/gitlab/">
+        Gitlab
+        
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/NuKeeperDotNet/NuKeeper"><i class='fab fa-fw fa-github'></i> Repo Github</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="/contributors"><i class='fas fa-fw fa-bullhorn'></i> Contributors</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="footer">
+      <center>
+    
+    <a class="github-button" href="https://github.com/NuKeeperDotnet/NuKeeper/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download matcornic/hugo-theme-learn on GitHub">Download</a>
+
+    
+    <a class="github-button" href="https://github.com/NuKeeperDotnet/NuKeeper" data-icon="octicon-star" data-show-count="true" aria-label="Star matcornic/hugo-theme-learn on GitHub">Star</a>
+
+    
+    <a class="github-button" href="https://github.com/NuKeeperDotnet/NuKeeper/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork matcornic/hugo-theme-learn on GitHub">Fork</a>
+
+    <p>Built with <a href="https://gohugo.io/">Hugo</a> and the <i class="fas fa-heart"></i><a href="https://github.com/matcornic/hugo-theme-learn"> Learn theme</a></p>
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Edit this page' href="https://github.com/NuKeeperDotnet/NuKeeper/edit/master/site/content/commands/repository.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Edit this page</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/commands/'>Commands</a> > Repository
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#with-arguments">With Arguments</a></li>
+<li><a href="#pr-from-local-repository">PR from local repository</a></li>
+<li><a href="#using-a-targetbranch">Using a targetBranch</a></li>
+<li><a href="#hidden-token">Hidden token</a></li>
+<li><a href="#custom-github-api-server">Custom GitHub API server</a></li>
+<li><a href="#options-for-controlling-pull-requests">Options for controlling pull requests</a>
+<ul>
+<li><a href="#examples">Examples</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Repository
+            </h1>
+          
+
+        
+
+
+
+
+
+<p>Use the repository command to raise multiple pull requests against a GitHub repository. The repository does not need to be present on the file system beforehand. It will be fetched to a temporary folder.</p>
+
+<p>If you run these command lines regularly, you can automatically get update pull requests <a href="https://github.com/NuKeeperDotNet/NuKeeper/pull/280">like this one</a> and always keep a project&rsquo;s dependencies up to date.</p>
+
+<p>Raising a pull request is intended to hook into the automated tests and manual review process that you use. You can then choose to merge or reject the pull request based on the outcome.</p>
+
+<p>In order to work with repositories, you will first need a personal access token.</p>
+
+<p><a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">Github</a></p>
+
+<pre><code class="language-sh">nukeeper repo https://github.com/myorg/myrepo token
+</code></pre>
+
+<p><a href="https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=vsts">Azure DevOps</a></p>
+
+<pre><code class="language-sh">nukeeper repo https://dev.azure.com/{org}/{project}/_git/{repo}/ token
+</code></pre>
+
+<p>The minimum scope of access associated for the token to make NuKeeper work is &ldquo;Code (Read &amp; write)&ldquo;.</p>
+
+<h3 id="with-arguments">With Arguments</h3>
+
+<p>I want one Pull Request that applies a top ten updates to my repository</p>
+
+<pre><code class="language-sh">nukeeper repo url token --maxpackageupdates 10 --consolidate
+</code></pre>
+
+<p>I want one Pull Request that applies  updates to all packages of the AWS SDK:</p>
+
+<pre><code class="language-sh">nukeeper repo url token --maxpackageupdates 100 --include ^AWSSDK. --consolidate
+</code></pre>
+
+<h3 id="pr-from-local-repository">PR from local repository</h3>
+
+<div class="notices info" ><p>This is only available for azure devops and vsts</p>
+</div>
+
+
+<p>//TODO</p>
+
+<h3 id="using-a-targetbranch">Using a targetBranch</h3>
+
+<div class="notices info" ><p>This is only available for azure devops, vsts and github right now</p>
+</div>
+
+
+<p>In some cases you want NuKeeper not to run on the default branch but on a specific (feature-)branch
+e.g. when you want to keep the feature branches for a certain feature updated and in sync across repositories.
+The &ndash;targetBranch option makes this possible. It will create pull-requests on a specific branch if updates are required.</p>
+
+<p>I want one Pull Request that applies updates to all packages to the feature-branch CoolNewFeature:</p>
+
+<pre><code class="language-sh">nukeeper repo url token --consolidate --tagetBranch CoolNewFeature
+</code></pre>
+
+<h3 id="hidden-token">Hidden token</h3>
+
+<p>The token is a secret; often you don&rsquo;t want to put it on the command line, e.g. if this command line is in a script stored in a public repository. In that case, you can put it in the appropriate environment variable blow and NuKeeper will automatically read it from there.
+ <code>NuKeeper_github_token</code>
+<code>Nukeeper_azure_devops_token</code></p>
+
+<pre><code class="language-sh">set NuKeeper_github_token=mygithubtoken
+</code></pre>
+
+<h3 id="custom-github-api-server">Custom GitHub API server</h3>
+
+<p>If you have a a different GitHub server, e.g. one hosted inside your organisation, you need to find out where its API root URL is. You can specify it to Nukeeper with e.g. <code>--api=https://github.mycompany.com/api/v3</code>. The default is the public API at <code>https://api.github.com</code></p>
+
+<p>The host must contain the word github to be able to select the right platform.</p>
+
+<h3 id="options-for-controlling-pull-requests">Options for controlling pull requests</h3>
+
+<p>NuKeeper often operates in a target-rich environment, where you don&rsquo;t want to raise all the potential pull requests at once.</p>
+
+<p>NuKeeper sorts the pull requests, using heuristics so that more impactful updates are at the top, but you also can control how many pull requests are raised, when and what levels of change.</p>
+
+<h4 id="examples">Examples</h4>
+
+<p><code>--maxpackageupdates 2</code> Limit to two pull requests generated by a run. The default value is 3.</p>
+
+<p><code>--change minor</code> Do not allow major version changes.</p>
+
+<p><code>--age 10d</code> Do not apply any version change until it has been available for 10 days. The default is 7 days. You can also specify this value in weeks with e.g. <code>age=6w</code> or hours with e.g. <code>age=12h</code>.</p>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1555581507"></script>
+    <script src="/js/perfect-scrollbar.min.js?1555581507"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1555581507"></script>
+    <script src="/js/jquery.sticky.js?1555581507"></script>
+    <script src="/js/featherlight.min.js?1555581507"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1555581507"></script>
+    <script src="/js/highlight.pack.js?1555581507"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1555581507"></script>
+    <script src="/js/learn.js?1555581507"></script>
+    <script src="/js/hugo-learn.js?1555581507"></script>
+
+    <link href="/mermaid/mermaid.css?1555581507" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1555581507"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-138277587-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </body>
+</html>
+
