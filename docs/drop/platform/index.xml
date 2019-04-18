@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Platform on NuKeeper</title>
+    <link>/platform/</link>
+    <description>Recent content in Platform on NuKeeper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Apr 2019 10:42:17 +0200</lastBuildDate>
+    
+	<atom:link href="/platform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Azure Devops</title>
+      <link>/platform/azure-devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/azure-devops/</guid>
+      <description>NuKeeper supports Azure Devops, VSTS and TFS on premise. The same instruction apply for all these platforms!
+NuKeeper supports intergration with Azure Devops in two ways. One of them is to use the repo command and the other one is through the extension. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</description>
+    </item>
+    
+    <item>
+      <title>Bitbucket</title>
+      <link>/platform/bitbucket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/bitbucket/</guid>
+      <description>NuKeeper has BitBucket support. This means NuKeeper can create PR&amp;rsquo;s to a single bitbucket repository using the repository command and a app password.
+Getting a app password To get a app password for your account go to bitbucket settings and click App password.
+NuKeeper needs an App password to create a PR on your repository.
+ Go to bitbucket settings Select App password Click the Create app password button Give it the following access rights:  Pull request: write(that should also select the other applicable access rights)  Store the token and use that for a NuKeeper repo command  Repo command The repo command has two required arguments.</description>
+    </item>
+    
+    <item>
+      <title>Gitea</title>
+      <link>/platform/gitea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/gitea/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>/platform/github/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>/platform/gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/gitlab/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
