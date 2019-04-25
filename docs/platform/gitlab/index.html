@@ -12,20 +12,20 @@
     <title>Gitlab :: NuKeeper</title>
 
     
-    <link href="/css/nucleus.css?1555606338" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1555606338" rel="stylesheet">
-    <link href="/css/hybrid.css?1555606338" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1555606338" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1555606338" rel="stylesheet">
-    <link href="/css/auto-complete.css?1555606338" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1555606338" rel="stylesheet">
-    <link href="/css/theme.css?1555606338" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1555606338" rel="stylesheet">
+    <link href="/css/nucleus.css?1556169330" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1556169330" rel="stylesheet">
+    <link href="/css/hybrid.css?1556169330" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1556169330" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1556169330" rel="stylesheet">
+    <link href="/css/auto-complete.css?1556169330" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1556169330" rel="stylesheet">
+    <link href="/css/theme.css?1556169330" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1556169330" rel="stylesheet">
     
-      <link href="/css/theme-nukeeper.css?1555606338" rel="stylesheet">
+      <link href="/css/theme-nukeeper.css?1556169330" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1555606338"></script>
+    <script src="/js/jquery-3.3.1.min.js?1556169330"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1555606338"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1555606338"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1556169330"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1556169330"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1555606338"></script>
+<script type="text/javascript" src="/js/search.js?1556169330"></script>
 
     
   </div>
@@ -558,6 +558,44 @@
 
 
 
+<p>NuKeeper has <a href="https://gitlab.com">GitLab</a> support. This means NuKeeper can create PR&rsquo;s to a <em>single</em> GitLab repository using the repository command and an access token.</p>
+
+<p>## Getting the Access Token</p>
+
+<p>To get an access token for your user account follow these steps:</p>
+
+<ol>
+<li>Go to your user profile <code>https://{YOUR_GITLAB_URL}/profile</code></li>
+<li>Select <code>Access Tokens</code> <code>https://{YOUR_GITLAB_URL}/profile/personal_access_tokens</code></li>
+<li>Create a new <code>Personal Access Token</code>
+
+<ol>
+<li>Assign a name.</li>
+<li>Select at least the following scopes for the token:
+
+<ol>
+<li><code>api</code> - Grants complete read/write access to the API, including all groups and projects.</li>
+<li><code>read_user</code> - Grants read-only access to the authenticated user&rsquo;s profile through the /user API endpoint, which includes username, public email, and full name. Also grants access to read-only API endpoints under /users.</li>
+<li><code>read_repository</code> - Grants read-only access to repositories on private projects using Git-over-HTTP (not using the API).</li>
+</ol></li>
+<li>Click <code>Create personal access token</code> button</li>
+</ol></li>
+<li>Store the token and use that for a NuKeeper repo command.</li>
+</ol>
+
+<p>## Repo command</p>
+
+<p>The repo command has two required arguments. The first one is the repository that you want to target. For GitLab <strong>you can use the same url that you use for cloning</strong>. So something like:</p>
+
+<pre><code class="language-sh">https://{YOUR_GITLAB_URL}/{PROJECT_NAME}/{REPOSITORY_NAME}.git
+</code></pre>
+
+<p>Now to run the command use</p>
+
+<pre><code class="language-sh">nukeeper repo https://{YOUR_GITLAB_URL}/{PROJECT_NAME}/{REPOSITORY_NAME}.git {Token}
+</code></pre>
+
+<p>Any additional arguments can be added after the app password, for more information checkout the <a href="/basics/configuration.md">Configuration</a> page.</p>
 
 
 <footer class=" footline" >
@@ -886,20 +924,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1555606338"></script>
-    <script src="/js/perfect-scrollbar.min.js?1555606338"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1555606338"></script>
-    <script src="/js/jquery.sticky.js?1555606338"></script>
-    <script src="/js/featherlight.min.js?1555606338"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1555606338"></script>
-    <script src="/js/highlight.pack.js?1555606338"></script>
+    <script src="/js/clipboard.min.js?1556169330"></script>
+    <script src="/js/perfect-scrollbar.min.js?1556169330"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1556169330"></script>
+    <script src="/js/jquery.sticky.js?1556169330"></script>
+    <script src="/js/featherlight.min.js?1556169330"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1556169330"></script>
+    <script src="/js/highlight.pack.js?1556169330"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1555606338"></script>
-    <script src="/js/learn.js?1555606338"></script>
-    <script src="/js/hugo-learn.js?1555606338"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1556169330"></script>
+    <script src="/js/learn.js?1556169330"></script>
+    <script src="/js/hugo-learn.js?1556169330"></script>
 
-    <link href="/mermaid/mermaid.css?1555606338" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1555606338"></script>
+    <link href="/mermaid/mermaid.css?1556169330" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1556169330"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

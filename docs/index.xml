@@ -113,7 +113,7 @@ NuKeeper needs an App password to create a PR on your repository.
       
       <guid>/contributors/</guid>
       <description>Thank you so much for making this happen!  
-.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@AnthonySteele522 commits@skolima72 commits@cohen99071 commits@NuKeeperBot39 commits@MarcBruins36 commits@shep198722 commits@slang2514 commits@zubivan4 commits@Jens-H-Eriksen3 commits@ChrisAnn2 commits@cswendrowski2 commits@acraven1 commits@ankeshdave1 commits@OneCyrus1 commits@flcdrg1 commits@josesimoes1 commits@markkemper11 commits@martincostello1 commits@MaxMommersteeg1 commits@LordMike1 commits@phatcher1 commits@sanderaernouts1 commits@Chama-StephanTuinder1 commits@area55git1 commits@jmiddour1 commits Tooling thanks to  Logos by area55 CommandLine utils by NateMcMaster Git automation by LibGit2Sharp Github client by Octokit licensed under MIT</description>
+.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@AnthonySteele523 commits@skolima72 commits@cohen99071 commits@MarcBruins40 commits@NuKeeperBot39 commits@shep198722 commits@slang2514 commits@MaxMommersteeg10 commits@zubivan6 commits@Jens-H-Eriksen3 commits@Chama-StephanTuinder3 commits@ChrisAnn2 commits@cswendrowski2 commits@sharpSteff2 commits@acraven1 commits@ankeshdave1 commits@OneCyrus1 commits@flcdrg1 commits@josesimoes1 commits@markkemper11 commits@martincostello1 commits@LordMike1 commits@phatcher1 commits@sanderaernouts1 commits@area55git1 commits@jmiddour1 commits Tooling thanks to  Logos by area55 CommandLine utils by NateMcMaster Git automation by LibGit2Sharp Github client by Octokit licensed under MIT</description>
     </item>
     
     <item>
@@ -154,7 +154,10 @@ NuKeeper needs an Access Tokens to create a PR on your repository.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/platform/gitlab/</guid>
-      <description></description>
+      <description>NuKeeper has GitLab support. This means NuKeeper can create PR&amp;rsquo;s to a single GitLab repository using the repository command and an access token.
+## Getting the Access Token
+To get an access token for your user account follow these steps:
+ Go to your user profile https://{YOUR_GITLAB_URL}/profile Select Access Tokens https://{YOUR_GITLAB_URL}/profile/personal_access_tokens Create a new Personal Access Token  Assign a name. Select at least the following scopes for the token:  api - Grants complete read/write access to the API, including all groups and projects.</description>
     </item>
     
     <item>
