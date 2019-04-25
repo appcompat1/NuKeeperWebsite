@@ -113,7 +113,7 @@ NuKeeper needs an App password to create a PR on your repository.
       
       <guid>/contributors/</guid>
       <description>Thank you so much for making this happen!  
-.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@AnthonySteele523 commits@skolima72 commits@cohen99071 commits@MarcBruins40 commits@NuKeeperBot39 commits@shep198722 commits@slang2514 commits@MaxMommersteeg10 commits@zubivan6 commits@Jens-H-Eriksen3 commits@Chama-StephanTuinder3 commits@ChrisAnn2 commits@cswendrowski2 commits@sharpSteff2 commits@acraven1 commits@ankeshdave1 commits@OneCyrus1 commits@flcdrg1 commits@josesimoes1 commits@markkemper11 commits@martincostello1 commits@LordMike1 commits@phatcher1 commits@sanderaernouts1 commits@area55git1 commits@jmiddour1 commits Tooling thanks to  Logos by area55 CommandLine utils by NateMcMaster Git automation by LibGit2Sharp Github client by Octokit licensed under MIT</description>
+.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@AnthonySteele523 commits@skolima72 commits@cohen99071 commits@MarcBruins41 commits@NuKeeperBot39 commits@shep198722 commits@slang2514 commits@MaxMommersteeg10 commits@zubivan7 commits@Jens-H-Eriksen3 commits@Chama-StephanTuinder3 commits@ChrisAnn2 commits@cswendrowski2 commits@sharpSteff2 commits@acraven1 commits@ankeshdave1 commits@OneCyrus1 commits@flcdrg1 commits@josesimoes1 commits@markkemper11 commits@martincostello1 commits@LordMike1 commits@phatcher1 commits@sanderaernouts1 commits@area55git1 commits@jmiddour1 commits Tooling thanks to  Logos by area55 CommandLine utils by NateMcMaster Git automation by LibGit2Sharp Github client by Octokit licensed under MIT</description>
     </item>
     
     <item>
@@ -133,10 +133,9 @@ nukeeper update --source https://api.nuget.org/v3/index.json --source http://pac
       
       <guid>/platform/gitea/</guid>
       <description>NuKeeper has Gitea support. This means NuKeeper can create PR&amp;rsquo;s to a single gitea repository using the repository command and an access token.
-## Getting the Access Token
-To get token for your account go to gitea user settings (https://yourGiteaUrl/user/settings) and click Applications.
+Getting the Access Token To get token for your account go to gitea user settings (https://yourGiteaUrl/user/settings) and click Applications.
 NuKeeper needs an Access Tokens to create a PR on your repository.
- Go to gitea user settings Select Applications Enter Token Name in Manage Access Tokens Click the Generate Token button Store the token and use that for a NuKeeper repo command  ## Repo command</description>
+ Go to gitea user settings Select Applications Enter Token Name in Manage Access Tokens Click the Generate Token button Store the token and use that for a NuKeeper repo command  Repo command The repo command has two required arguments.</description>
     </item>
     
     <item>
@@ -147,7 +146,7 @@ NuKeeper needs an Access Tokens to create a PR on your repository.
       <guid>/platform/github/</guid>
       <description>NuKeeper has extended Github support. This means NuKeeper can create PR&amp;rsquo;s to a single github repository, update all repositories within a whole organization or on an entire Github server. The only requirement is that we have a valid personal access token(PAT).
 Getting a token To get a token for your account go to settings -&amp;gt; developer settings -&amp;gt; personal access token and click Generate new token.
-Go to your github settings Click developer settings Click the personal access token button Give it the following access rights: Repo command: Repo  Organisation command and Global command: Admin:org (read) Admin:public_key (read)</description>
+Go to your github settings Click developer settings Click the personal access token button Give it the following access rights: Repo command: Repo Organisation command and Global command: Admin:org (read) Admin:public_key (read)</description>
     </item>
     
     <item>
@@ -157,8 +156,7 @@ Go to your github settings Click developer settings Click the personal access to
       
       <guid>/platform/gitlab/</guid>
       <description>NuKeeper has GitLab support. This means NuKeeper can create PR&amp;rsquo;s to a single GitLab repository using the repository command and an access token.
-## Getting the Access Token
-To get an access token for your user account follow these steps:
+Getting the Access Token To get an access token for your user account follow these steps:
  Go to your user profile https://{YOUR_GITLAB_URL}/profile Select Access Tokens https://{YOUR_GITLAB_URL}/profile/personal_access_tokens Create a new Personal Access Token  Assign a name. Select at least the following scopes for the token:  api - Grants complete read/write access to the API, including all groups and projects.</description>
     </item>
     

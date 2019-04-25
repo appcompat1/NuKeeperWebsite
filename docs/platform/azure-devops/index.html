@@ -12,20 +12,20 @@
     <title>Azure Devops :: NuKeeper</title>
 
     
-    <link href="/css/nucleus.css?1556170823" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1556170823" rel="stylesheet">
-    <link href="/css/hybrid.css?1556170823" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1556170823" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1556170823" rel="stylesheet">
-    <link href="/css/auto-complete.css?1556170823" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1556170823" rel="stylesheet">
-    <link href="/css/theme.css?1556170823" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1556170823" rel="stylesheet">
+    <link href="/css/nucleus.css?1556196244" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1556196244" rel="stylesheet">
+    <link href="/css/hybrid.css?1556196244" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1556196244" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1556196244" rel="stylesheet">
+    <link href="/css/auto-complete.css?1556196244" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1556196244" rel="stylesheet">
+    <link href="/css/theme.css?1556196244" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1556196244" rel="stylesheet">
     
-      <link href="/css/theme-nukeeper.css?1556170823" rel="stylesheet">
+      <link href="/css/theme-nukeeper.css?1556196244" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1556170823"></script>
+    <script src="/js/jquery-3.3.1.min.js?1556196244"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1556170823"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1556170823"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1556196244"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1556196244"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1556170823"></script>
+<script type="text/javascript" src="/js/search.js?1556196244"></script>
 
     
   </div>
@@ -583,11 +583,11 @@
 </div>
 
 
-<p>NuKeeper supports intergration with Azure Devops in two ways. One of them is to use the <code>repo</code> command and the other one is through the <code>extension</code>. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</p>
+<p>NuKeeper supports intergration with Azure Devops in two ways. One of them is to use the <strong>repo</strong> command and the other one is through the <strong>extension</strong>. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</p>
 
 <h2 id="extension">Extension</h2>
 
-<p>The NuKeeper extension is available in the <a href="https://marketplace.visualstudio.com/items?itemName=nukeeper.nukeeper#overview">marketplace</a>. In order to install it you need to add it to your organisation click the <code>Get it free</code> button and follow the installation. Once that is done you can create a new pipeline and use the extension.</p>
+<p>The NuKeeper extension is available in the <a href="https://marketplace.visualstudio.com/items?itemName=nukeeper.nukeeper#overview">marketplace</a>. In order to install it you need to add it to your organisation click the <strong>Get it free</strong> button and follow the installation. Once that is done you can create a new pipeline and use the extension.</p>
 
 <h3 id="installation">Installation</h3>
 
@@ -598,7 +598,7 @@
 <ol>
 <li>Add a new build pipeline and select yaml.</li>
 
-<li><p>Add the following <code>yml</code> file and adjust where necessary:</p>
+<li><p>Add the following <strong>yml</strong> file and adjust where necessary:</p>
 
 <pre>
     <code class="language-yml">resources:
@@ -611,7 +611,7 @@
 </pre>
     </li>
 
-<li><p>Optionally add extra arguments, The extension just call the <code>repo</code> command, so any arguments extra for your repo command can be added here.
+<li><p>Optionally add extra arguments, The extension just call the <strong>repo</strong> command, so any arguments extra for your repo command can be added here.
 <pre>
 <code class="language-yml">resources:
     steps:
@@ -623,7 +623,7 @@
 
 <li><p>Go to triggers and click the <i class="fas fa-plus"></i> Add button to add your schedule. <a href="https://github.com/Microsoft/azure-pipelines-yaml/issues/39">This cannot be done in yml yet.</a></p></li>
 
-<li><p>Finally give the <code>build service user</code> the required <em><a href="#permissions">Permissions</a></em> and take it for a spin by qeueing a new build!</p></li>
+<li><p>Finally give the <strong>build service user</strong> the required <em><a href="#permissions">Permissions</a></em> and take it for a spin by qeueing a new build!</p></li>
 </ol>
 
 <h4 id="editor-mode">Editor mode</h4>
@@ -632,18 +632,18 @@
 <li>Create a new build pipeline for editor mode.</li>
 <li>Select your repository and select the master branch.</li>
 <li>Add a new task to your pipeline and select NuKeeper.</li>
-<li>Optionally, click on the task and add additional arguments to the <code>Arguments</code> field. For help on the arguments checkout the <a href="/basics/configuration.md">Configuration</a> page. The extension just call the <code>repo</code> command, so any arguments extra for your repo command can be added here.</li>
+<li>Optionally, click on the task and add additional arguments to the <strong>Arguments</strong> field. For help on the arguments checkout the <a href="/basics/configuration.md">Configuration</a> page. The extension just call the <strong>repo</strong> command, so any arguments extra for your repo command can be added here.</li>
 <li>Go to triggers and click the <i class="fas fa-plus"></i> Add button to add your schedule.</li>
 
 <li><p>Enable your agent to access the oauth token:
 <img src="/img/oauth_checkmark.png" alt="Oauth checkmark" /></p></li>
 
-<li><p>Finally give the <code>build service user</code> the required <em><a href="#permissions">Permissions</a></em> and take it for a spin by qeueing a new build!</p></li>
+<li><p>Finally give the <strong>build service user</strong> the required <em><a href="#permissions">Permissions</a></em> and take it for a spin by qeueing a new build!</p></li>
 </ol>
 
 <h4 id="permissions">Permissions</h4>
 
-<p>The extensions uses the <code>build service user</code> to make a PR. By default this user is not allowed to do that. We have to give it the permissions to do so:</p>
+<p>The extensions uses the <strong>build service user</strong> to make a PR. By default this user is not allowed to do that. We have to give it the permissions to do so:</p>
 
 <ol>
 <li>Go to &ldquo;Project settings&rdquo; in your AzureDevops home screen.</li>
@@ -655,9 +655,9 @@
 <p>Give it the following rights:</p>
 
 <ul>
-<li>Contribute <code>Allow</code></li>
-<li>Contribute to pull requests <code>Allow</code></li>
-<li>Create branch <code>Allow</code></li>
+<li>Contribute <strong>Allow</strong></li>
+<li>Contribute to pull requests <strong>Allow</strong></li>
+<li>Create branch <strong>Allow</strong></li>
 </ul>
 
 <h2 id="repo-command">Repo command</h2>
@@ -1003,20 +1003,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1556170823"></script>
-    <script src="/js/perfect-scrollbar.min.js?1556170823"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1556170823"></script>
-    <script src="/js/jquery.sticky.js?1556170823"></script>
-    <script src="/js/featherlight.min.js?1556170823"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1556170823"></script>
-    <script src="/js/highlight.pack.js?1556170823"></script>
+    <script src="/js/clipboard.min.js?1556196244"></script>
+    <script src="/js/perfect-scrollbar.min.js?1556196244"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1556196244"></script>
+    <script src="/js/jquery.sticky.js?1556196244"></script>
+    <script src="/js/featherlight.min.js?1556196244"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1556196244"></script>
+    <script src="/js/highlight.pack.js?1556196244"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1556170823"></script>
-    <script src="/js/learn.js?1556170823"></script>
-    <script src="/js/hugo-learn.js?1556170823"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1556196244"></script>
+    <script src="/js/learn.js?1556196244"></script>
+    <script src="/js/hugo-learn.js?1556196244"></script>
 
-    <link href="/mermaid/mermaid.css?1556170823" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1556170823"></script>
+    <link href="/mermaid/mermaid.css?1556196244" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1556196244"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
