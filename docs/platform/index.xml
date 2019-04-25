@@ -52,7 +52,9 @@ NuKeeper needs an Access Tokens to create a PR on your repository.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/platform/github/</guid>
-      <description></description>
+      <description>NuKeeper has extended Github support. This means NuKeeper can create PR&amp;rsquo;s to a single github repository, update all repositories within a whole organization or on an entire Github server. The only requirement is that we have a valid personal access token(PAT).
+Getting a token To get a token for your account go to settings -&amp;gt; developer settings -&amp;gt; personal access token and click Generate new token.
+Go to your github settings Click developer settings Click the personal access token button Give it the following access rights: Repo command: Repo  Organisation command and Global command: Admin:org (read) Admin:public_key (read)</description>
     </item>
     
     <item>

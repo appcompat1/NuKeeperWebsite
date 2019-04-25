@@ -12,20 +12,20 @@
     <title>Github :: NuKeeper</title>
 
     
-    <link href="/css/nucleus.css?1556169330" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1556169330" rel="stylesheet">
-    <link href="/css/hybrid.css?1556169330" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1556169330" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1556169330" rel="stylesheet">
-    <link href="/css/auto-complete.css?1556169330" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1556169330" rel="stylesheet">
-    <link href="/css/theme.css?1556169330" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1556169330" rel="stylesheet">
+    <link href="/css/nucleus.css?1556169363" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1556169363" rel="stylesheet">
+    <link href="/css/hybrid.css?1556169363" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1556169363" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1556169363" rel="stylesheet">
+    <link href="/css/auto-complete.css?1556169363" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1556169363" rel="stylesheet">
+    <link href="/css/theme.css?1556169363" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1556169363" rel="stylesheet">
     
-      <link href="/css/theme-nukeeper.css?1556169330" rel="stylesheet">
+      <link href="/css/theme-nukeeper.css?1556169363" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1556169330"></script>
+    <script src="/js/jquery-3.3.1.min.js?1556169363"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -54,14 +54,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1556169330"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1556169330"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1556169363"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1556169363"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1556169330"></script>
+<script type="text/javascript" src="/js/search.js?1556169363"></script>
 
     
   </div>
@@ -534,7 +534,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#getting-a-token">Getting a token</a></li>
+<li><a href="#repo-command">Repo command</a></li>
+<li><a href="#organisation-command">Organisation command</a></li>
+<li><a href="#global-command">Global command</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -558,6 +568,70 @@
 
 
 
+
+
+<p>NuKeeper has extended Github support. This means NuKeeper can create PR&rsquo;s to a <em>single</em> github repository, update all repositories within a whole organization or on an entire Github server. The only requirement is that we have a valid personal access token(PAT).</p>
+
+<h2 id="getting-a-token">Getting a token</h2>
+
+<p>To get a token for your <em>account</em> go to <a href="https://github.com/settings/tokens"><code>settings -&gt; developer settings -&gt; personal access token</code></a> and click <em>Generate new token</em>.</p>
+
+<ol class="task-list">
+<li>Go to <code>your github settings</code></li>
+<li>Click <code>developer settings</code></li>
+<li>Click the <code>personal access token</code> button</li>
+<li>Give it the following access rights:
+
+<ul class="task-list">
+<li>Repo command:
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Repo</label></li>
+</ul></li>
+<li>Organisation command and Global command:
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Admin:org (read)</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Admin:public_key (read)<br /></label></li>
+</ul></li>
+</ul></li>
+<li>Store the token and use that for the commands</li>
+</ol>
+
+<h2 id="repo-command">Repo command</h2>
+
+<p>The repo command has two required arguments. The first one is the repository that you want to target. For github <strong>you can use the same url that you use for cloning</strong>. So something like:</p>
+
+<p>For your own repositories:</p>
+
+<pre><code class="language-sh">https://github.com/{username}/{repositoryname}.git
+</code></pre>
+
+<p>For organisation repositories:</p>
+
+<pre><code class="language-sh">https://github.com/{organisation}/{repositoryname}.git
+</code></pre>
+
+<p>Now to run the command use</p>
+
+<pre><code class="language-sh">nukeeper repo https://github.com/{username}/{repositoryname}.git {PAT}
+</code></pre>
+
+<p>Any additional arguments can be added after the app password, for more information checkout the <a href="/basics/configuration.md">Configuration</a> page.</p>
+
+<h2 id="organisation-command">Organisation command</h2>
+
+<p>Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same <a href="https://help.github.com/articles/about-organizations/">GitHub Organisation</a>.</p>
+
+<pre><code class="language-sh">nukeeper org myteam mygithubtoken
+</code></pre>
+
+<h2 id="global-command">Global command</h2>
+
+<p>Use the global command to update a particular package across your entire github server.</p>
+
+<pre><code class="language-sh">nukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3
+</code></pre>
 
 
 <footer class=" footline" >
@@ -889,20 +963,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1556169330"></script>
-    <script src="/js/perfect-scrollbar.min.js?1556169330"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1556169330"></script>
-    <script src="/js/jquery.sticky.js?1556169330"></script>
-    <script src="/js/featherlight.min.js?1556169330"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1556169330"></script>
-    <script src="/js/highlight.pack.js?1556169330"></script>
+    <script src="/js/clipboard.min.js?1556169363"></script>
+    <script src="/js/perfect-scrollbar.min.js?1556169363"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1556169363"></script>
+    <script src="/js/jquery.sticky.js?1556169363"></script>
+    <script src="/js/featherlight.min.js?1556169363"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1556169363"></script>
+    <script src="/js/highlight.pack.js?1556169363"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1556169330"></script>
-    <script src="/js/learn.js?1556169330"></script>
-    <script src="/js/hugo-learn.js?1556169330"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1556169363"></script>
+    <script src="/js/learn.js?1556169363"></script>
+    <script src="/js/hugo-learn.js?1556169363"></script>
 
-    <link href="/mermaid/mermaid.css?1556169330" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1556169330"></script>
+    <link href="/mermaid/mermaid.css?1556169363" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1556169363"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
