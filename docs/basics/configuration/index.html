@@ -11,20 +11,20 @@
     <title>Configuration :: NuKeeper</title>
 
     
-    <link href="/css/nucleus.css?1558103774" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1558103774" rel="stylesheet">
-    <link href="/css/hybrid.css?1558103774" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1558103774" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1558103774" rel="stylesheet">
-    <link href="/css/auto-complete.css?1558103774" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1558103774" rel="stylesheet">
-    <link href="/css/theme.css?1558103774" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1558103774" rel="stylesheet">
+    <link href="/css/nucleus.css?1558344672" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1558344672" rel="stylesheet">
+    <link href="/css/hybrid.css?1558344672" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1558344672" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1558344672" rel="stylesheet">
+    <link href="/css/auto-complete.css?1558344672" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1558344672" rel="stylesheet">
+    <link href="/css/theme.css?1558344672" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1558344672" rel="stylesheet">
     
-      <link href="/css/theme-nukeeper.css?1558103774" rel="stylesheet">
+      <link href="/css/theme-nukeeper.css?1558344672" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1558103774"></script>
+    <script src="/js/jquery-3.3.1.min.js?1558344672"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1558103774"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1558103774"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1558344672"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1558344672"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1558103774"></script>
+<script type="text/javascript" src="/js/search.js?1558344672"></script>
 
     
   </div>
@@ -770,6 +770,13 @@
 <td><code>repo</code>, <code>org</code>, <code>global</code>, <code>update</code></td>
 <td><em>null</em></td>
 </tr>
+
+<tr>
+<td>deletebranchaftermerge</td>
+<td></td>
+<td><em>all</em></td>
+<td>true</td>
+</tr>
 </tbody>
 </table>
 
@@ -821,13 +828,15 @@ The default value <code>Major</code> will allow updates to the overall latest ve
 
 <li><p><em>consolidate</em> Consolidate updates into a single pull request, instead of the default of 1 pull request per package update applied.</p></li>
 
-<li><p><em>platform</em> One of <code>GitHub</code>, <code>AzureDevOps</code>, <code>Bitbucket</code>, <code>BitbucketLocal</code>. Determines which kind of source control api will be used. This is typicaly infered from the api url structure, but since this does not always work, it can be specified here if neccessary.</p></li>
+<li><p><em>platform</em> One of <code>GitHub</code>, <code>AzureDevOps</code>, <code>Bitbucket</code>, <code>BitbucketLocal</code>, <code>Gitlab</code>, <code>Gitea</code>. Determines which kind of source control api will be used. This is typicaly infered from the api url structure, but since this does not always work, it can be specified here if neccessary.</p></li>
 
 <li><p><em>includerepos</em> A regex to filter repositories by name. Only consider repositories where the name matches this regex pattern. Used in Organisation and Global mode.</p></li>
 
 <li><p><em>excluderepos</em> A regex to filter repositories by name. Do not consider repositories where the name matches this regex pattern. Used in Organisation and Global mode.</p></li>
 
 <li><p><em>branchnameprefix</em> A prefix that gets added to branch name that NuKeeper creates. Allows you to put those branches in hierarchy (E.G. &lsquo;nukeeper/&rsquo;).</p></li>
+
+<li><p><em>deletebranchaftermerge</em> Specifies whether a branch should be automatically deleted or not once the branch has been merged. Currently only works with <code>Platform</code> equal to <code>AzureDevOps</code>, <code>Gitlab</code> or <code>Bitbucket</code>.</p></li>
 </ul>
 
 
@@ -1157,20 +1166,20 @@ The default value <code>Major</code> will allow updates to the overall latest ve
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1558103774"></script>
-    <script src="/js/perfect-scrollbar.min.js?1558103774"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1558103774"></script>
-    <script src="/js/jquery.sticky.js?1558103774"></script>
-    <script src="/js/featherlight.min.js?1558103774"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1558103774"></script>
-    <script src="/js/highlight.pack.js?1558103774"></script>
+    <script src="/js/clipboard.min.js?1558344672"></script>
+    <script src="/js/perfect-scrollbar.min.js?1558344672"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1558344672"></script>
+    <script src="/js/jquery.sticky.js?1558344672"></script>
+    <script src="/js/featherlight.min.js?1558344672"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1558344672"></script>
+    <script src="/js/highlight.pack.js?1558344672"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1558103774"></script>
-    <script src="/js/learn.js?1558103774"></script>
-    <script src="/js/hugo-learn.js?1558103774"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1558344672"></script>
+    <script src="/js/learn.js?1558344672"></script>
+    <script src="/js/hugo-learn.js?1558344672"></script>
 
-    <link href="/mermaid/mermaid.css?1558103774" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1558103774"></script>
+    <link href="/mermaid/mermaid.css?1558344672" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1558344672"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
