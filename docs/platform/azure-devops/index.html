@@ -11,20 +11,20 @@
     <title>Azure Devops :: NuKeeper</title>
 
     
-    <link href="/css/nucleus.css?1561982330" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1561982330" rel="stylesheet">
-    <link href="/css/hybrid.css?1561982330" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1561982330" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1561982330" rel="stylesheet">
-    <link href="/css/auto-complete.css?1561982330" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1561982330" rel="stylesheet">
-    <link href="/css/theme.css?1561982330" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1561982330" rel="stylesheet">
+    <link href="/css/nucleus.css?1579858359" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1579858359" rel="stylesheet">
+    <link href="/css/hybrid.css?1579858359" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1579858359" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1579858359" rel="stylesheet">
+    <link href="/css/auto-complete.css?1579858359" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1579858359" rel="stylesheet">
+    <link href="/css/theme.css?1579858359" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1579858359" rel="stylesheet">
     
-      <link href="/css/theme-nukeeper.css?1561982330" rel="stylesheet">
+      <link href="/css/theme-nukeeper.css?1579858359" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1561982330"></script>
+    <script src="/js/jquery-3.3.1.min.js?1579858359"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1561982330"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1561982330"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1579858359"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1579858359"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1561982330"></script>
+<script type="text/javascript" src="/js/search.js?1579858359"></script>
 
     
   </div>
@@ -597,30 +597,46 @@
 <ol>
 <li>Add a new build pipeline and select yaml.</li>
 
-<li><p>Add the following <strong>yml</strong> file and adjust where necessary:</p>
+<li><p>Add the following <strong>yaml</strong> file and adjust where necessary:
+```yml
+trigger: none # don&rsquo;t run as CI build</p>
 
-<pre>
-    <code class="language-yml">resources:
-       - repo: self #point to its own repo, change it if you don't want that
-    pool:
-        name: Hosted VS2017 # can be anything you want
-    steps:
-      - task: nukeeper.nukeeper.nukeeper.NuKeeper@0
-        displayName: NuKeeper</code><span class="copy-to-clipboard" title="Copy to clipboard"></span>
-</pre>
-    </li>
+<p>schedules:</p>
 
-<li><p>Optionally add extra arguments, The extension just call the <strong>repo</strong> command, so any arguments extra for your repo command can be added here.
-<pre>
-<code class="language-yml">resources:
-    steps:
-    - task: nukeeper.nukeeper.nukeeper.NuKeeper@0
+<ul>
+<li>cron: &ldquo;0 0 * * *&rdquo; # run daily at UTC midnight
+displayName: Check for updated dependencies
+branches:
+include:
+
+<ul>
+<li>master
+always: true # regardless of changes</li>
+</ul></li>
+</ul>
+
+<p>resources:
+   - repo: self # point to its own repo, change it if you don&rsquo;t want that</p>
+
+<p>pool:
+    name: Hosted VS2017 # can be anything you want</p>
+
+<p>steps:
+  - task: nukeeper.nukeeper.nukeeper.NuKeeper@0
     displayName: NuKeeper
-    inputs:
-        arguments: &lsquo;-m 3 -v d&rsquo;</code><span class="copy-to-clipboard" title="Copy to clipboard"></span>
-</pre></p></li>
+```</p></li>
 
-<li><p>Go to triggers and click the <i class="fas fa-plus"></i> Add button to add your schedule. <a href="https://github.com/Microsoft/azure-pipelines-yaml/issues/39">This cannot be done in yml yet.</a></p></li>
+<li><p>Optionally add extra arguments, The extension just calls the <strong>repo</strong> command, so any arguments extra for your repo command can be added here.
+```yml
+steps:</p>
+
+<ul>
+<li>task: nukeeper.nukeeper.nukeeper.NuKeeper@0
+displayName: NuKeeper
+inputs:
+arguments: &lsquo;-m 3 -v d&rsquo;
+```</li>
+</ul></li>
 
 <li><p>Finally give the <strong>build service user</strong> the required <em><a href="#permissions">Permissions</a></em> and take it for a spin by qeueing a new build!</p></li>
 </ol>
@@ -1002,20 +1018,20 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1561982330"></script>
-    <script src="/js/perfect-scrollbar.min.js?1561982330"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1561982330"></script>
-    <script src="/js/jquery.sticky.js?1561982330"></script>
-    <script src="/js/featherlight.min.js?1561982330"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1561982330"></script>
-    <script src="/js/highlight.pack.js?1561982330"></script>
+    <script src="/js/clipboard.min.js?1579858359"></script>
+    <script src="/js/perfect-scrollbar.min.js?1579858359"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1579858359"></script>
+    <script src="/js/jquery.sticky.js?1579858359"></script>
+    <script src="/js/featherlight.min.js?1579858359"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1579858359"></script>
+    <script src="/js/highlight.pack.js?1579858359"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1561982330"></script>
-    <script src="/js/learn.js?1561982330"></script>
-    <script src="/js/hugo-learn.js?1561982330"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1579858359"></script>
+    <script src="/js/learn.js?1579858359"></script>
+    <script src="/js/hugo-learn.js?1579858359"></script>
 
-    <link href="/mermaid/mermaid.css?1561982330" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1561982330"></script>
+    <link href="/mermaid/mermaid.css?1579858359" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1579858359"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
