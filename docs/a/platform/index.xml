@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Platform on NuKeeper</title>
+    <link>/platform/</link>
+    <description>Recent content in Platform on NuKeeper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Apr 2019 10:42:17 +0200</lastBuildDate>
+    
+	<atom:link href="/platform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Azure Devops</title>
+      <link>/platform/azure-devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/azure-devops/</guid>
+      <description>NuKeeper supports Azure Devops, VSTS and TFS on premise. The same instruction apply for all these platforms!
+NuKeeper supports integration with Azure Devops in two ways. One of them is to use the repo command and the other one is through the extension. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</description>
+    </item>
+    
+    <item>
+      <title>Bitbucket</title>
+      <link>/platform/bitbucket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/bitbucket/</guid>
+      <description>NuKeeper has BitBucket support. This means NuKeeper can create PR&amp;rsquo;s to a single bitbucket repository using the repository command and a app password.
+Getting a app password To get a app password for your account go to bitbucket settings and click App password.
+NuKeeper needs an App password to create a PR on your repository.
+ Go to bitbucket settings Select App password Click the Create app password button Give it the following access rights:  Pull request: write(that should also select the other applicable access rights)  Store the token and use that for a NuKeeper repo command  Repo command The repo command has two required arguments.</description>
+    </item>
+    
+    <item>
+      <title>Gitea</title>
+      <link>/platform/gitea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/gitea/</guid>
+      <description>NuKeeper has Gitea support. This means NuKeeper can create PR&amp;rsquo;s to a single gitea repository using the repository command and an access token.
+Getting the Access Token To get token for your account go to gitea user settings (https://yourGiteaUrl/user/settings) and click Applications.
+NuKeeper needs an Access Tokens to create a PR on your repository.
+ Go to gitea user settings Select Applications Enter Token Name in Manage Access Tokens Click the Generate Token button Store the token and use that for a NuKeeper repo command  Repo command The repo command has two required arguments.</description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>/platform/github/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/github/</guid>
+      <description>NuKeeper has extended Github support. This means NuKeeper can create PR&amp;rsquo;s to a single github repository, update all repositories within a whole organization or on an entire Github server. The only requirement is that we have a valid personal access token(PAT).
+Getting a token To get a token for your account go to settings -&amp;gt; developer settings -&amp;gt; personal access token and click Generate new token.
+Go to your github settings Click developer settings Click the personal access token button Give it the following access rights: Repo command: Repo Organisation command and Global command: Admin:org (read) Admin:public_key (read)</description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>/platform/gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/gitlab/</guid>
+      <description>NuKeeper has GitLab support. This means NuKeeper can create PR&amp;rsquo;s to a single GitLab repository using the repository command and an access token.
+Getting the Access Token To get an access token for your user account follow these steps:
+ Go to your user profile https://{YOUR_GITLAB_URL}/profile Select Access Tokens https://{YOUR_GITLAB_URL}/profile/personal_access_tokens Create a new Personal Access Token  Assign a name. Select at least the following scopes for the token:  api - Grants complete read/write access to the API, including all groups and projects.</description>
+    </item>
+    
+  </channel>
+</rss>

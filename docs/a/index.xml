@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NuKeeper</title>
+    <link>/</link>
+    <description>Recent content on NuKeeper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Inspect</title>
+      <link>/commands/inspect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/inspect/</guid>
+      <description>Use the inspect command to show updates that can be applied to a solution.
+Inspect the current folder:
+cd C:\code\MyApp nukeeper inspect  This produces output e.g.
+Found 2 package updates Microsoft.Extensions.Configuration.Json to 2.1.0 from 2.0.2 in 1 place since 13 days ago. Swashbuckle.AspNetCore to 2.5.0 from 2.4.0 in 1 place since 6 days ago.  You can inspect a different folder:
+nukeeper inspect C:\code\MyApp  </description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>/basics/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/installation/</guid>
+      <description>You will first need .NET Core 2.1 or later installed.
+NuKeeper can be found on NuGet as a global tool. The source is on GitHub.
+Install NuKeeper with:
+dotnet tool install nukeeper --global  Update NuKeeper with:
+dotnet tool update nukeeper --global   Note: NuKeeper has experimental support for running package updates on Linux/macOS. This functionality relies on Mono installation on local system. Please refer to https://www.mono-project.com/ for more information about how to install mono.</description>
+    </item>
+    
+    <item>
+      <title>Update</title>
+      <link>/commands/update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/update/</guid>
+      <description>Use the update command to apply an update to code.
+Apply a update chosen by NuKeeper to a solution:
+cd C:\code\MyApp nukeeper update  or
+nukeeper update C:\code\MyApp  Apply up to ten package updates in a run:
+nukeeper update C:\code\MyApp --maxpackageupdates 10  Apply an update to a particular package:
+nukeeper update C:\code\MyApp --include SomePackageThatIWant  Exclude updates to a particular package:
+nukeeper update C:\code\MyApp --exclude SomePackageThatIDoNotWant  Apply updates to all packages of the AWS SDK, a set of closely-related packages with names that all start with AWSSDK.</description>
+    </item>
+    
+    <item>
+      <title>Output and Logging</title>
+      <link>/basics/output-and-logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/output-and-logging/</guid>
+      <description>Text produced by NuKeeper falls into two categories: logging and output. Both can be independently sent to console, or to file, or turned off. Both default to the console.
+Options related to logging are verbosity, logdestination and logfile. Options related to output are outputformat, outputdestination, and outputfile
+If the run of NuKeeper is intended to produce Pull Requests, then output and logging is less important. But if the run is intended to inspect local code or remote repositories, the output is the primary result of the run.</description>
+    </item>
+    
+    <item>
+      <title>Repository</title>
+      <link>/commands/repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/repository/</guid>
+      <description>Use the repository command to raise multiple pull requests against a GitHub repository. The repository does not need to be present on the file system beforehand. It will be fetched to a temporary folder.
+If you run these command lines regularly, you can automatically get update pull requests like this one and always keep a project&amp;rsquo;s dependencies up to date.
+Raising a pull request is intended to hook into the automated tests and manual review process that you use.</description>
+    </item>
+    
+    <item>
+      <title>Azure Devops</title>
+      <link>/platform/azure-devops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/azure-devops/</guid>
+      <description>NuKeeper supports Azure Devops, VSTS and TFS on premise. The same instruction apply for all these platforms!
+NuKeeper supports integration with Azure Devops in two ways. One of them is to use the repo command and the other one is through the extension. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</description>
+    </item>
+    
+    <item>
+      <title>Bitbucket</title>
+      <link>/platform/bitbucket/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/bitbucket/</guid>
+      <description>NuKeeper has BitBucket support. This means NuKeeper can create PR&amp;rsquo;s to a single bitbucket repository using the repository command and a app password.
+Getting a app password To get a app password for your account go to bitbucket settings and click App password.
+NuKeeper needs an App password to create a PR on your repository.
+ Go to bitbucket settings Select App password Click the Create app password button Give it the following access rights:  Pull request: write(that should also select the other applicable access rights)  Store the token and use that for a NuKeeper repo command  Repo command The repo command has two required arguments.</description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>/basics/configuration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/configuration/</guid>
+      <description>Long name Short name Commands where it applies Default value     help h all    age a all 7d   change c all Major   useprerelease  all FromPrerelease   exclude e all null   include i all null   source s all NuGet.org public api url         verbosity v all Normal   logdestination  all Console   logfile  all &amp;lsquo;nukeeper.</description>
+    </item>
+    
+    <item>
+      <title>Contributors</title>
+      <link>/contributors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contributors/</guid>
+      <description>Thank you so much for making this happen!  
+.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@AnthonySteele525 commits@skolima120 commits@cohen99071 commits@MarcBruins48 commits@NuKeeperBot39 commits@MaxMommersteeg26 commits@shep198722 commits@slang2515 commits@zubivan12 commits@StephanTuinder6 commits@Bouke4 commits@sharpSteff4 commits@Jens-H-Eriksen3 commits@Chama-StephanTuinder3 commits@ChrisAnn2 commits@cswendrowski2 commits@msallin2 commits@acraven1 commits@ankeshdave1 commits@OneCyrus1 commits@danielmedina1 commits@david-driscoll1 commits@flcdrg1 commits@Maxwe111 commits@josesimoes1 commits@Skotina1 commits@markkemper11 commits@martincostello1 commits@LordMike1 commits@mivano1 commits@oskar1 commits@phatcher1 commits@ransagy1 commits@sanderaernouts1 commits@ThinkingBIGRon1 commits@area55git1 commits@jmiddour1 commits Tooling thanks to  Logos by area55 CommandLine utils by NateMcMaster Git automation by LibGit2Sharp Github client by Octokit licensed under MIT</description>
+    </item>
+    
+    <item>
+      <title>Custom Feeds</title>
+      <link>/basics/custom-feeds/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/custom-feeds/</guid>
+      <description>If you have a custom or private NuGet feed, it is recommended that you use a NuGet.config file in your repository. It will be used by NuKeeper, and by other tools. You can specify a list of NuGet sources on the command line. e.g.
+nukeeper update --source https://api.nuget.org/v3/index.json --source http://packages.mycompany.com/nugetfeed  If you override this, you can chose to include the global public api.nuget.org feed or not. You may not need to, if your internal feed proxies the nuget.</description>
+    </item>
+    
+    <item>
+      <title>Gitea</title>
+      <link>/platform/gitea/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/gitea/</guid>
+      <description>NuKeeper has Gitea support. This means NuKeeper can create PR&amp;rsquo;s to a single gitea repository using the repository command and an access token.
+Getting the Access Token To get token for your account go to gitea user settings (https://yourGiteaUrl/user/settings) and click Applications.
+NuKeeper needs an Access Tokens to create a PR on your repository.
+ Go to gitea user settings Select Applications Enter Token Name in Manage Access Tokens Click the Generate Token button Store the token and use that for a NuKeeper repo command  Repo command The repo command has two required arguments.</description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>/platform/github/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/github/</guid>
+      <description>NuKeeper has extended Github support. This means NuKeeper can create PR&amp;rsquo;s to a single github repository, update all repositories within a whole organization or on an entire Github server. The only requirement is that we have a valid personal access token(PAT).
+Getting a token To get a token for your account go to settings -&amp;gt; developer settings -&amp;gt; personal access token and click Generate new token.
+Go to your github settings Click developer settings Click the personal access token button Give it the following access rights: Repo command: Repo Organisation command and Global command: Admin:org (read) Admin:public_key (read)</description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>/platform/gitlab/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/platform/gitlab/</guid>
+      <description>NuKeeper has GitLab support. This means NuKeeper can create PR&amp;rsquo;s to a single GitLab repository using the repository command and an access token.
+Getting the Access Token To get an access token for your user account follow these steps:
+ Go to your user profile https://{YOUR_GITLAB_URL}/profile Select Access Tokens https://{YOUR_GITLAB_URL}/profile/personal_access_tokens Create a new Personal Access Token  Assign a name. Select at least the following scopes for the token:  api - Grants complete read/write access to the API, including all groups and projects.</description>
+    </item>
+    
+    <item>
+      <title>Global</title>
+      <link>/commands/global/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/global/</guid>
+      <description>This command is only available for github
+Use the global command to update a particular package across your entire github server.
+nukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3  </description>
+    </item>
+    
+    <item>
+      <title>Organisation</title>
+      <link>/commands/organisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/organisation/</guid>
+      <description>This command is only available for github
+Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same GitHub Organisation.
+nukeeper org myteam mygithubtoken  </description>
+    </item>
+    
+  </channel>
+</rss>

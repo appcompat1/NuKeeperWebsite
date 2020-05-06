@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Commands on NuKeeper</title>
+    <link>/commands/</link>
+    <description>Recent content in Commands on NuKeeper</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jul 2019 13:58:08 +0200</lastBuildDate>
+    
+	<atom:link href="/commands/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Inspect</title>
+      <link>/commands/inspect/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/inspect/</guid>
+      <description>Use the inspect command to show updates that can be applied to a solution.
+Inspect the current folder:
+cd C:\code\MyApp nukeeper inspect  This produces output e.g.
+Found 2 package updates Microsoft.Extensions.Configuration.Json to 2.1.0 from 2.0.2 in 1 place since 13 days ago. Swashbuckle.AspNetCore to 2.5.0 from 2.4.0 in 1 place since 6 days ago.  You can inspect a different folder:
+nukeeper inspect C:\code\MyApp  </description>
+    </item>
+    
+    <item>
+      <title>Update</title>
+      <link>/commands/update/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/update/</guid>
+      <description>Use the update command to apply an update to code.
+Apply a update chosen by NuKeeper to a solution:
+cd C:\code\MyApp nukeeper update  or
+nukeeper update C:\code\MyApp  Apply up to ten package updates in a run:
+nukeeper update C:\code\MyApp --maxpackageupdates 10  Apply an update to a particular package:
+nukeeper update C:\code\MyApp --include SomePackageThatIWant  Exclude updates to a particular package:
+nukeeper update C:\code\MyApp --exclude SomePackageThatIDoNotWant  Apply updates to all packages of the AWS SDK, a set of closely-related packages with names that all start with AWSSDK.</description>
+    </item>
+    
+    <item>
+      <title>Repository</title>
+      <link>/commands/repository/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/repository/</guid>
+      <description>Use the repository command to raise multiple pull requests against a GitHub repository. The repository does not need to be present on the file system beforehand. It will be fetched to a temporary folder.
+If you run these command lines regularly, you can automatically get update pull requests like this one and always keep a project&amp;rsquo;s dependencies up to date.
+Raising a pull request is intended to hook into the automated tests and manual review process that you use.</description>
+    </item>
+    
+    <item>
+      <title>Global</title>
+      <link>/commands/global/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/global/</guid>
+      <description>This command is only available for github
+Use the global command to update a particular package across your entire github server.
+nukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3  </description>
+    </item>
+    
+    <item>
+      <title>Organisation</title>
+      <link>/commands/organisation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/commands/organisation/</guid>
+      <description>This command is only available for github
+Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same GitHub Organisation.
+nukeeper org myteam mygithubtoken  </description>
+    </item>
+    
+  </channel>
+</rss>

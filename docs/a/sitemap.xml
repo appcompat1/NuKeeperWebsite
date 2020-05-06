@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/basics/</loc>
+    <lastmod>2019-04-12T18:32:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/commands/inspect/</loc>
+    <lastmod>2019-04-13T17:02:13+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/basics/installation/</loc>
+    <lastmod>2019-07-01T12:54:19+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/commands/</loc>
+    <lastmod>2019-07-01T13:58:08+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/commands/update/</loc>
+    <lastmod>2019-04-13T17:02:13+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/basics/output-and-logging/</loc>
+    <lastmod>2019-04-12T18:32:39+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/platform/</loc>
+    <lastmod>2019-04-14T10:42:17+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/commands/repository/</loc>
+    <lastmod>2019-06-04T13:17:20+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-04-13T17:02:13+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/platform/azure-devops/</loc>
+    <lastmod>2020-01-24T10:31:48+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/platform/bitbucket/</loc>
+    <lastmod>2019-04-25T14:43:14+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/basics/configuration/</loc>
+    <lastmod>2020-05-05T15:20:37+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/contributors/</loc>
+    <lastmod>2019-04-13T16:14:21+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/basics/custom-feeds/</loc>
+    <lastmod>2019-04-13T17:02:13+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/platform/gitea/</loc>
+    <lastmod>2019-04-25T14:43:14+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/platform/github/</loc>
+    <lastmod>2019-04-25T14:43:14+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/platform/gitlab/</loc>
+    <lastmod>2019-04-25T14:43:14+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/commands/global/</loc>
+    <lastmod>2019-04-13T17:02:13+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/commands/organisation/</loc>
+    <lastmod>2019-04-13T17:02:13+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
