@@ -56,9 +56,11 @@ Raising a pull request is intended to hook into the automated tests and manual r
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/commands/global/</guid>
-      <description>This command is only available for github
-Use the global command to update a particular package across your entire github server.
-nukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3  </description>
+      <description>This command is only available for github and Azure DevOps
+Use the global command to update a particular package across your entire github server or Azure DevOps organization.
+Github
+nukeeper global token --include PackageToUpdate --api https://github.mycompany.com/api/v3  Azure DevOps
+nukeeper global token --include PackageToUpdate --api https://dev.azure.com/organization  </description>
     </item>
     
     <item>
@@ -67,9 +69,11 @@ nukeeper global mygithubtoken --include PackageToUpdate --api https://github.myc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/commands/organisation/</guid>
-      <description>This command is only available for github
-Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same GitHub Organisation.
-nukeeper org myteam mygithubtoken  </description>
+      <description>This command is only available for github and Azure DevOps
+Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same GitHub Organisation or within the same Azure DevOps project.
+Github
+nukeeper org myteam token  Azure DevOps
+nukeeper org project token --include PackageToUpdate --api https://dev.azure.com/organization  </description>
     </item>
     
   </channel>

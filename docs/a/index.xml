@@ -80,7 +80,7 @@ Raising a pull request is intended to hook into the automated tests and manual r
       
       <guid>/platform/azure-devops/</guid>
       <description>NuKeeper supports Azure Devops, VSTS and TFS on premise. The same instruction apply for all these platforms!
-NuKeeper supports integration with Azure Devops in two ways. One of them is to use the repo command and the other one is through the extension. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</description>
+NuKeeper supports integration with Azure Devops in two ways. One of them is to use the repo, org or global commands and the other one is through the extension. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</description>
     </item>
     
     <item>
@@ -111,7 +111,7 @@ NuKeeper needs an App password to create a PR on your repository.
       
       <guid>/contributors/</guid>
       <description>Thank you so much for making this happen!  
-.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@AnthonySteele525 commits@skolima120 commits@cohen99071 commits@MarcBruins48 commits@NuKeeperBot39 commits@MaxMommersteeg26 commits@shep198722 commits@slang2515 commits@zubivan12 commits@StephanTuinder6 commits@Bouke4 commits@sharpSteff4 commits@Jens-H-Eriksen3 commits@Chama-StephanTuinder3 commits@ChrisAnn2 commits@cswendrowski2 commits@msallin2 commits@acraven1 commits@ankeshdave1 commits@OneCyrus1 commits@danielmedina1 commits@david-driscoll1 commits@flcdrg1 commits@Maxwe111 commits@josesimoes1 commits@Skotina1 commits@markkemper11 commits@martincostello1 commits@LordMike1 commits@mivano1 commits@oskar1 commits@phatcher1 commits@ransagy1 commits@sanderaernouts1 commits@ThinkingBIGRon1 commits@area55git1 commits@jmiddour1 commits Tooling thanks to  Logos by area55 CommandLine utils by NateMcMaster Git automation by LibGit2Sharp Github client by Octokit licensed under MIT</description>
+.ghContributors{display:flex;flex-flow: wrap;align-content: flex-start}.ghContributors  div{width: 50% ;display: inline-flex;margin-bottom: 5px;}.ghContributors  div label{padding-left: 4px ;}.ghContributors  div span{font-size: x-small;padding-left: 4px ;}@AnthonySteele527 commits@skolima120 commits@cohen99071 commits@MarcBruins48 commits@NuKeeperBot39 commits@MaxMommersteeg26 commits@shep198722 commits@slang2515 commits@zubivan12 commits@StephanTuinder6 commits@Bouke4 commits@sharpSteff4 commits@Jens-H-Eriksen3 commits@Chama-StephanTuinder3 commits@ChrisAnn2 commits@cswendrowski2 commits@msallin2 commits@acraven1 commits@ankeshdave1 commits@Greybird1 commits@OneCyrus1 commits@danielmedina1 commits@david-driscoll1 commits@flcdrg1 commits@Maxwe111 commits@josesimoes1 commits@Skotina1 commits@markkemper11 commits@martincostello1 commits@LordMike1 commits@mivano1 commits@oskar1 commits@phatcher1 commits@ransagy1 commits@sanderaernouts1 commits@ThinkingBIGRon1 commits@area55git1 commits@jmiddour1 commits Tooling thanks to  Logos by area55 CommandLine utils by NateMcMaster Git automation by LibGit2Sharp Github client by Octokit licensed under MIT</description>
     </item>
     
     <item>
@@ -164,9 +164,11 @@ Getting the Access Token To get an access token for your user account follow the
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/commands/global/</guid>
-      <description>This command is only available for github
-Use the global command to update a particular package across your entire github server.
-nukeeper global mygithubtoken --include PackageToUpdate --api https://github.mycompany.com/api/v3  </description>
+      <description>This command is only available for github and Azure DevOps
+Use the global command to update a particular package across your entire github server or Azure DevOps organization.
+Github
+nukeeper global token --include PackageToUpdate --api https://github.mycompany.com/api/v3  Azure DevOps
+nukeeper global token --include PackageToUpdate --api https://dev.azure.com/organization  </description>
     </item>
     
     <item>
@@ -175,9 +177,11 @@ nukeeper global mygithubtoken --include PackageToUpdate --api https://github.myc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/commands/organisation/</guid>
-      <description>This command is only available for github
-Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same GitHub Organisation.
-nukeeper org myteam mygithubtoken  </description>
+      <description>This command is only available for github and Azure DevOps
+Use the organisation command to raise multiple pull requests against multiple GitHub repositories within the same GitHub Organisation or within the same Azure DevOps project.
+Github
+nukeeper org myteam token  Azure DevOps
+nukeeper org project token --include PackageToUpdate --api https://dev.azure.com/organization  </description>
     </item>
     
   </channel>

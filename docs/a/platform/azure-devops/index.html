@@ -11,20 +11,20 @@
     <title>Azure Devops :: NuKeeper</title>
 
     
-    <link href="/css/nucleus.css?1588780522" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1588780522" rel="stylesheet">
-    <link href="/css/hybrid.css?1588780522" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1588780522" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1588780522" rel="stylesheet">
-    <link href="/css/auto-complete.css?1588780522" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1588780522" rel="stylesheet">
-    <link href="/css/theme.css?1588780522" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1588780522" rel="stylesheet">
+    <link href="/css/nucleus.css?1589141601" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1589141601" rel="stylesheet">
+    <link href="/css/hybrid.css?1589141601" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1589141601" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1589141601" rel="stylesheet">
+    <link href="/css/auto-complete.css?1589141601" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1589141601" rel="stylesheet">
+    <link href="/css/theme.css?1589141601" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1589141601" rel="stylesheet">
     
-      <link href="/css/theme-nukeeper.css?1588780522" rel="stylesheet">
+      <link href="/css/theme-nukeeper.css?1589141601" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1588780522"></script>
+    <script src="/js/jquery-3.3.1.min.js?1589141601"></script>
 
     <style type="text/css">
       :root #header + #content > #left > #rlblock_left{
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1588780522"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1588780522"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1589141601"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1589141601"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1588780522"></script>
+<script type="text/javascript" src="/js/search.js?1589141601"></script>
 
     
   </div>
@@ -546,7 +546,9 @@
 <li><a href="#permissions">Permissions</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#repo-command">Repo command</a>
+<li><a href="#repo-command">Repo command</a></li>
+<li><a href="#organisation-command">Organisation command</a></li>
+<li><a href="#global-command">Global command</a>
 <ul>
 <li><a href="#additional-arguments">Additional arguments</a></li>
 </ul></li>
@@ -582,7 +584,7 @@
 </div>
 
 
-<p>NuKeeper supports integration with Azure Devops in two ways. One of them is to use the <strong>repo</strong> command and the other one is through the <strong>extension</strong>. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</p>
+<p>NuKeeper supports integration with Azure Devops in two ways. One of them is to use the <strong>repo</strong>, <strong>org</strong> or <strong>global</strong> commands and the other one is through the <strong>extension</strong>. The benefit of the extension is that you can make a build pipeline with the extension and schedule your pipeline. This way you can automate your updating flow.</p>
 
 <h2 id="extension">Extension</h2>
 
@@ -680,6 +682,20 @@ arguments: &lsquo;-m 3 -v d&rsquo;
 <p>The repo command works for azure-devops &amp; vsts they same as for the other platforms. You will need a <a href="https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops">personal access token</a> to use the repo command.</p>
 
 <pre><code class="language-sh">nukeeper repo &quot;https://dev.azure.com/{org}/{project}/_git/{repo}/&quot; &lt;PAT&gt;
+</code></pre>
+
+<h2 id="organisation-command">Organisation command</h2>
+
+<p>Use the organisation command to raise multiple pull requests against multiple git repositories within the same Azure DevOps project.</p>
+
+<pre><code class="language-sh">nukeeper org project &lt;PAT&gt; --api https://dev.azure.com/myAzureDevOpsorganization
+</code></pre>
+
+<h2 id="global-command">Global command</h2>
+
+<p>Use the global command to update a particular package across your entire Azure DevOps organization.</p>
+
+<pre><code class="language-sh">nukeeper global &lt;PAT&gt; --api https://dev.azure.com/myAzureDevOpsorganization --include PackageToUpdate
 </code></pre>
 
 <h3 id="additional-arguments">Additional arguments</h3>
@@ -1018,20 +1034,20 @@ arguments: &lsquo;-m 3 -v d&rsquo;
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1588780522"></script>
-    <script src="/js/perfect-scrollbar.min.js?1588780522"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1588780522"></script>
-    <script src="/js/jquery.sticky.js?1588780522"></script>
-    <script src="/js/featherlight.min.js?1588780522"></script>
-    <script src="/js/html5shiv-printshiv.min.js?1588780522"></script>
-    <script src="/js/highlight.pack.js?1588780522"></script>
+    <script src="/js/clipboard.min.js?1589141601"></script>
+    <script src="/js/perfect-scrollbar.min.js?1589141601"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1589141601"></script>
+    <script src="/js/jquery.sticky.js?1589141601"></script>
+    <script src="/js/featherlight.min.js?1589141601"></script>
+    <script src="/js/html5shiv-printshiv.min.js?1589141601"></script>
+    <script src="/js/highlight.pack.js?1589141601"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1588780522"></script>
-    <script src="/js/learn.js?1588780522"></script>
-    <script src="/js/hugo-learn.js?1588780522"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1589141601"></script>
+    <script src="/js/learn.js?1589141601"></script>
+    <script src="/js/hugo-learn.js?1589141601"></script>
 
-    <link href="/mermaid/mermaid.css?1588780522" type="text/css" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1588780522"></script>
+    <link href="/mermaid/mermaid.css?1589141601" type="text/css" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1589141601"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
