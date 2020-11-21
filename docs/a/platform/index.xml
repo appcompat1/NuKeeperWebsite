@@ -63,7 +63,7 @@ Go to your github settings Click developer settings Click the personal access to
       
       <guid>/platform/gitlab/</guid>
       <description>NuKeeper has GitLab support. This means NuKeeper can create PR&amp;rsquo;s to a single GitLab repository using the repository command and an access token.
-Getting the Access Token To get an access token for your user account follow these steps:
+Note: this does not work with a self-managed GitLab. Getting the Access Token To get an access token for your user account follow these steps:
  Go to your user profile https://{YOUR_GITLAB_URL}/profile Select Access Tokens https://{YOUR_GITLAB_URL}/profile/personal_access_tokens Create a new Personal Access Token  Assign a name. Select at least the following scopes for the token:  api - Grants complete read/write access to the API, including all groups and projects.</description>
     </item>
     
